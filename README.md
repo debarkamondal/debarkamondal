@@ -22,7 +22,6 @@ I build high-performance, secure, and scalable systems. Be it baremetal for serv
 | rmqtt/rmqtt | Contributor | Rust, Distributed MQTT, WebHooks |
 | libsignal-dezire | Creator | Rust, Cryptography, FFI |
 | KhamoshChat | Creator | React Native, Expo, E2EE |
-| Adda Cafe System | Full Stack Engineer | TypeScript, SvelteKit, Three.js, GoLang, AWS |
 
 *   rmqtt/rmqtt (PR #372): Implemented core offline message event support for the WebHook plugin, facilitating real-time event handling in distributed IoT environments.
 *   libsignal-dezire: A pure Rust implementation of the Signal Protocol. Engineered for high security and cross-platform compatibility via FFI (C, iOS, JNI).
