@@ -1,19 +1,40 @@
+***
 
-Debarka Mondal | Full Stack & Systems Engineer
+Debarka Mondal
+Full Stack & Systems Engineer
 
-Architecting high-performance, secure, and scalable real-time systems. Bridging the gap between the protocol layer (Rust) and cross-platform mobile user experiences (React Native).
+I build high-performance, secure, and scalable systems. Be it baremetal for serverless I do it all.
+
+---
 
 🛠 Technical Expertise
-* Backend & Infrastructure: Rust (Systems programming, Distributed Systems, MQTT Protocol stack), Node.js, WebHook Event Systems.
-* Mobile/Web: React Native, Expo, Svelte, Next.js.
-* Protocol Security: Signal Protocol (E2EE, X3DH, Double Ratchet), AEAD, FFI (C/JNI/iOS).
-* Tooling: Docker, CI/CD, Distributed Systems Design.
+*   Backend & Systems: Rust (Distributed Systems, Protocol Design, MQTT), Node.js, Event-driven Architecture.
+*   Mobile & Web: React Native, Expo, Next.js, Svelte.
+*   Security & Protocols: Signal Protocol Implementation (X3DH, Double Ratchet), AEAD, FFI (C/JNI/iOS).
+*   DevOps & Tooling: Docker, CI/CD, cross-platform build pipelines.
 
-🚀 Key Contributions
-* rmqtt/rmqtt: Implemented OfflineMessage event support for the WebHook plugin. Contributed core feature-branch logic alongside multi-language documentation (EN/CN).
-* libsignal-dezire: Developed a pure Rust implementation of E2EE messaging protocols. Engineered for cross-platform integration via FFI (C/iOS/JNI).
-* KhamoshChat: Engineering E2EE messaging on mobile via Expo/React Native, integrating custom protocol implementations to ensure secure, real-time communication.
-* Cafe Management System: Full-stack architecture involving a TypeScript-based order management service and a SvelteKit-powered frontend for real-time table management.
+---
+
+🚀 Key Engineering Contributions
+
+| Project | Role | Tech Stack |
+| :--- | :--- | :--- |
+| rmqtt/rmqtt | Contributor | Rust, Distributed MQTT, WebHooks |
+| libsignal-dezire | Creator | Rust, Cryptography, FFI |
+| KhamoshChat | Creator | React Native, Expo, E2EE |
+| Adda Cafe System | Full Stack Engineer | TypeScript, SvelteKit, Three.js, GoLang, AWS |
+
+*   rmqtt/rmqtt (PR #372): Implemented core offline message event support for the WebHook plugin, facilitating real-time event handling in distributed IoT environments.
+*   libsignal-dezire: A pure Rust implementation of the Signal Protocol. Engineered for high security and cross-platform compatibility via FFI (C, iOS, JNI).
+*   KhamoshChat: Engineering E2EE messaging on mobile, leveraging custom secure protocol implementations for privacy-first architecture.
+
+---
 
 💼 Career Focus
-I thrive in high-growth startups where I can influence the full technical stack. I bring a systems-first mindset to full-stack challenges: whether it’s reducing event overhead in a distributed broker or streamlining cross-platform mobile architecture.
+I thrive in high-growth, technically ambitious startups where I can own the full stack. My approach combines the precision of systems engineering (Rust) with the agility of full-stack mobile development (React Native/TS), ensuring the applications I build are not just functional, but performant and secure at scale.
+
+---
+
+📫 Connect with me: [LinkedIn/debarkamondal](https://www.linkedin.com/in/debarkamondal/) | [gitHub/@debarkamondal](https://github.com/debarkamondal)
+
+***
