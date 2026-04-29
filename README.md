@@ -1,43 +1,37 @@
-# Astro Starter Kit: Minimal
+Debarka Mondal
+Full Stack & Systems Engineer
 
-```sh
-bun create astro@latest -- --template minimal
-```
+I build high-performance, secure, and scalable systems. Be it baremetal for serverless I do it all.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+🛠 Technical Expertise
+*   Backend & Systems: Rust (Distributed Systems, Protocol Design, MQTT), Node.js, Event-driven Architecture.
+*   Mobile & Web: React Native, Expo, Next.js, Svelte.
+*   Security & Protocols: Signal Protocol Implementation (X3DH, Double Ratchet), AEAD, FFI (C/JNI/iOS).
+*   DevOps & Tooling: Docker, CI/CD, cross-platform build pipelines.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+🚀 Key Engineering Contributions
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+| Project | Role | Tech Stack |
+| :--- | :--- | :--- |
+| rmqtt/rmqtt | Contributor | Rust, Distributed MQTT, WebHooks |
+| libsignal-dezire | Creator | Rust, Cryptography, FFI |
+| KhamoshChat | Creator | React Native, Expo, E2EE |
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+*   rmqtt/rmqtt (PR #372): Implemented core offline message event support for the WebHook plugin, facilitating real-time event handling in distributed IoT environments.
+*   libsignal-dezire: A pure Rust implementation of the Signal Protocol. Engineered for high security and cross-platform compatibility via FFI (C, iOS, JNI).
+*   KhamoshChat: Engineering E2EE messaging on mobile, leveraging custom secure protocol implementations for privacy-first architecture.
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+💼 Career Focus
+I thrive in high-growth, technically ambitious startups where I can own the full stack. My approach combines the precision of systems engineering (Rust) with the agility of full-stack mobile development (React Native/TS), ensuring the applications I build are not just functional, but performant and secure at scale.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+📫 Connect with me: [LinkedIn/debarkamondal](https://www.linkedin.com/in/debarkamondal/) | [gitHub/@debarkamondal](https://github.com/debarkamondal)
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+***
