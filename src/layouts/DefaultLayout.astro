@@ -6,33 +6,36 @@ const { title = "Debarka Mondal" } = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Portfolio of Debarka Mondal" />
-        <title>{title}</title>
-        
-        <!-- Theme init script to avoid flash of wrong theme -->
-        <script is:inline>
-          const theme = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme');
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              return 'dark';
-            }
-            return 'light';
-          })();
-          
-          if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-          }
-        </script>
-    </head>
-    <body class="font-sans antialiased">
-        <Navigation />
-        <main>
-            <slot />
-        </main>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Debarka Mondal" />
+    <title>{title}</title>
+
+    <!-- Theme init script to avoid flash of wrong theme -->
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <Navigation />
+    <main class="max-w-[1600px] mx-auto w-full">
+      <slot />
+    </main>
+  </body>
 </html>

@@ -1,18 +1,35 @@
 ---
+
 ---
 
-<div id="graph-container" class="absolute inset-0 z-0 overflow-hidden opacity-80 pointer-events-none transition-all duration-700 ease-in-out">
+<div
+  id="graph-container"
+  class="absolute inset-0 z-0 overflow-hidden opacity-80 pointer-events-none transition-all duration-700 ease-in-out"
+>
   <svg id="knowledge-graph" class="w-full h-full"></svg>
-  
-  <button id="close-graph-btn" class="absolute top-24 right-8 p-3 rounded-full bg-text/5 backdrop-blur-md border border-border opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-text/10 text-text">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+
+  <button
+    id="close-graph-btn"
+    class="absolute top-24 right-8 p-3 rounded-full bg-text/5 backdrop-blur-md border border-border opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-text/10 text-text"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"></path>
     </svg>
   </button>
 </div>
 
 <script>
-  import * as d3 from 'd3';
+  import * as d3 from "d3";
 
   interface GraphNode extends d3.SimulationNodeDatum {
     id: string;
@@ -35,38 +52,41 @@
   let isInteractive = false;
 
   async function initGraph() {
-    const svg = d3.select<SVGSVGElement, unknown>('#knowledge-graph');
-    const container = document.getElementById('graph-container') as HTMLElement | null;
-    
+    const svg = d3.select<SVGSVGElement, unknown>("#knowledge-graph");
+    const container = document.getElementById(
+      "graph-container",
+    ) as HTMLElement | null;
+
     if (!container) return;
-    
+
     const width = container.clientWidth;
     const height = container.clientHeight;
 
-    const g = svg.append('g');
-    const rotateG = g.append('g');
+    const g = svg.append("g");
+    const rotateG = g.append("g");
 
     // Zoom support (enabled only in interactive mode)
-    const zoom = d3.zoom<SVGSVGElement, unknown>()
+    const zoom = d3
+      .zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.5, 3])
       .filter((event) => {
         if (!isInteractive) return false;
-        return (!event.ctrlKey || event.type === 'wheel') && !event.button;
+        return (!event.ctrlKey || event.type === "wheel") && !event.button;
       })
-      .on('zoom', (event) => {
-        g.attr('transform', event.transform);
+      .on("zoom", (event) => {
+        g.attr("transform", event.transform);
       });
 
     svg.call(zoom);
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
+    svg.attr("viewBox", `0 0 ${width} ${height}`);
 
     try {
-      const response = await fetch('/graph.json');
+      const response = await fetch("/graph.json");
       const data = await response.json();
-      
+
       // Calculate Degree
       const degree: Record<string, number> = {};
-      data.nodes.forEach((n: { id: string }) => degree[n.id] = 0);
+      data.nodes.forEach((n: { id: string }) => (degree[n.id] = 0));
       data.links.forEach((l: { source: string; target: string }) => {
         degree[l.source] = (degree[l.source] || 0) + 1;
         degree[l.target] = (degree[l.target] || 0) + 1;
@@ -75,209 +95,316 @@
       const maxDegree = d3.max(Object.values(degree)) || 1;
 
       // Scales
-      const nodeSize = d3.scaleSqrt()
-        .domain([1, maxDegree])
-        .range([3, 10]);
+      const nodeSize = d3.scaleSqrt().domain([1, maxDegree]).range([3, 10]);
 
-      const linkWidth = d3.scaleLinear()
+      const linkWidth = d3
+        .scaleLinear()
         .domain([1, maxDegree])
         .range([0.5, 1.5]);
 
-      const nodeOpacity = d3.scaleLinear()
+      const nodeOpacity = d3
+        .scaleLinear()
         .domain([1, maxDegree])
         .range([0.3, 1]);
 
-      const nodes: GraphNode[] = data.nodes.map((d: any) => ({...d}));
-      const links: GraphLink[] = data.links.map((d: any) => ({...d}));
+      const nodes: GraphNode[] = data.nodes.map((d: any) => ({ ...d }));
+      const links: GraphLink[] = data.links.map((d: any) => ({ ...d }));
 
       let currentCx = width > 768 ? width * 0.7 : width / 2;
       let currentCy = height / 2;
 
-      simulation = d3.forceSimulation<GraphNode, GraphLink>(nodes)
-        .force('link', d3.forceLink<GraphNode, GraphLink>(links).id(d => d.id).distance(80).strength(0.5))
-        .force('charge', d3.forceManyBody().strength(-100))
-        .force('center', d3.forceCenter(currentCx, currentCy))
-        .force('collision', d3.forceCollide<GraphNode>().radius(d => nodeSize(degree[d.id]) + 2))
-        .force('x', d3.forceX().strength(0.05))
-        .force('y', d3.forceY().strength(0.05))
+      simulation = d3
+        .forceSimulation<GraphNode, GraphLink>(nodes)
+        .force(
+          "link",
+          d3
+            .forceLink<GraphNode, GraphLink>(links)
+            .id((d) => d.id)
+            .distance(80)
+            .strength(0.5),
+        )
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force("center", d3.forceCenter(0, 0))
+        .force(
+          "collision",
+          d3
+            .forceCollide<GraphNode>()
+            .radius((d) => nodeSize(degree[d.id]) + 2),
+        )
+        .force("x", d3.forceX(0).strength(0.05))
+        .force("y", d3.forceY(0).strength(0.05))
         .alphaDecay(0.01)
         .alphaTarget(0.01);
 
-      rotateG.attr('transform', `rotate(90, ${currentCx}, ${currentCy})`);
+      rotateG.attr(
+        "transform",
+        `translate(${currentCx}, ${currentCy}) rotate(90)`,
+      );
 
-      const link = rotateG.append('g')
-        .attr('stroke', 'currentColor')
-        .attr('stroke-opacity', 0.2)
-        .selectAll('line')
+      const link = rotateG
+        .append("g")
+        .attr("stroke", "currentColor")
+        .attr("stroke-opacity", 0.2)
+        .selectAll("line")
         .data(links)
-        .join('line')
-        .attr('stroke-width', d => {
+        .join("line")
+        .attr("stroke-width", (d) => {
           const s = d.source as GraphNode;
           const t = d.target as GraphNode;
           return linkWidth((degree[s.id] + degree[t.id]) / 2 || 1);
         });
 
-      const node = rotateG.append('g')
-        .selectAll('g.node')
+      const node = rotateG
+        .append("g")
+        .selectAll("g.node")
         .data(nodes)
-        .join('g')
-        .attr('class', 'node');
+        .join("g")
+        .attr("class", "node");
 
-      node.append('circle')
-        .attr('class', 'node-base')
-        .attr('r', d => nodeSize(degree[d.id]) + 1)
-        .attr('fill', 'var(--bg-color)')
-        .attr('stroke', 'none');
+      node
+        .append("circle")
+        .attr("class", "node-base")
+        .attr("r", (d) => nodeSize(degree[d.id]) + 1)
+        .attr("fill", "var(--bg-color)")
+        .attr("stroke", "none");
 
-      node.append('circle')
-        .attr('class', 'node-shade')
-        .attr('r', d => nodeSize(degree[d.id]))
-        .attr('fill', 'currentColor')
-        .attr('fill-opacity', d => nodeOpacity(degree[d.id]))
-        .attr('stroke', 'none');
+      node
+        .append("circle")
+        .attr("class", "node-shade")
+        .attr("r", (d) => nodeSize(degree[d.id]))
+        .attr("fill", "currentColor")
+        .attr("fill-opacity", (d) => nodeOpacity(degree[d.id]))
+        .attr("stroke", "none");
 
-      node.append('text')
-        .attr('class', 'node-label hidden')
-        .attr('transform', 'rotate(-90)')
-        .attr('dx', d => nodeSize(degree[d.id]) + 4)
-        .attr('dy', 3)
-        .text(d => d.id.split('-').pop() || d.id)
-        .attr('font-size', '8px')
-        .attr('fill', 'currentColor')
-        .attr('opacity', 0.4)
-        .attr('stroke', 'none')
-        .attr('pointer-events', 'none');
+      node
+        .append("text")
+        .attr("class", "node-label hidden")
+        .attr("transform", "rotate(-90)")
+        .attr("dx", (d) => nodeSize(degree[d.id]) + 4)
+        .attr("dy", 3)
+        .text((d) => d.id.split("-").pop() || d.id)
+        .attr("font-size", "8px")
+        .attr("fill", "currentColor")
+        .attr("opacity", 0.4)
+        .attr("stroke", "none")
+        .attr("pointer-events", "none");
 
-      simulation.on('tick', () => {
+      simulation.on("tick", () => {
         link
-          .attr('x1', d => (d.source as GraphNode).x!)
-          .attr('y1', d => (d.source as GraphNode).y!)
-          .attr('x2', d => (d.target as GraphNode).x!)
-          .attr('y2', d => (d.target as GraphNode).y!);
+          .attr("x1", (d) => (d.source as GraphNode).x!)
+          .attr("y1", (d) => (d.source as GraphNode).y!)
+          .attr("x2", (d) => (d.target as GraphNode).x!)
+          .attr("y2", (d) => (d.target as GraphNode).y!);
 
-        node
-          .attr('transform', d => `translate(${d.x},${d.y})`);
+        node.attr("transform", (d) => `translate(${d.x},${d.y})`);
       });
 
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         if (!container || !simulation) return;
         const newWidth = container.clientWidth;
         const newHeight = container.clientHeight;
-        svg.attr('viewBox', `0 0 ${newWidth} ${newHeight}`);
-        
-        currentCx = newWidth > 768 ? newWidth * 0.7 : newWidth / 2;
+        svg.attr("viewBox", `0 0 ${newWidth} ${newHeight}`);
+
+        if (isInteractive) {
+          currentCx = newWidth / 2;
+        } else {
+          currentCx = newWidth > 768 ? newWidth * 0.7 : newWidth / 2;
+        }
         currentCy = newHeight / 2;
-        
-        simulation.force('center', d3.forceCenter(currentCx, currentCy));
-        rotateG.attr('transform', `rotate(90, ${currentCx}, ${currentCy})`);
-        
+
+        rotateG.attr(
+          "transform",
+          `translate(${currentCx}, ${currentCy}) rotate(90)`,
+        );
+
         simulation.alpha(0.3).restart();
       });
 
       window.toggleGraphInteractivity = () => {
         isInteractive = !isInteractive;
-        const closeBtn = document.getElementById('close-graph-btn');
-        
+        const closeBtn = document.getElementById("close-graph-btn");
+
         if (isInteractive) {
-          container.classList.remove('pointer-events-none', 'z-0', 'opacity-80');
-          container.classList.add('opacity-100', 'z-40', 'bg-bg/95', 'backdrop-blur-sm');
-          svg.selectAll('.node-label').classed('hidden', false);
-          
-          if (closeBtn) {
-            closeBtn.classList.remove('opacity-0', 'pointer-events-none');
-            closeBtn.classList.add('opacity-100', 'pointer-events-auto');
+          const newWidth = container.clientWidth;
+          const newHeight = container.clientHeight;
+          currentCx = newWidth / 2;
+          currentCy = newHeight / 2;
+
+          if (simulation) {
+            rotateG
+              .transition()
+              .duration(500)
+              .ease(d3.easeSinInOut)
+              .attr(
+                "transform",
+                `translate(${currentCx}, ${currentCy}) rotate(90)`,
+              );
           }
 
-          const drag = d3.drag<SVGGElement, GraphNode>()
-            .on('start', (event) => {
-              if (!event.active && simulation) simulation.alphaTarget(0.3).restart();
+          container.classList.remove(
+            "pointer-events-none",
+            "z-0",
+            "opacity-80",
+          );
+          container.classList.add(
+            "opacity-100",
+            "z-40",
+            "bg-bg/95",
+            "backdrop-blur-sm",
+          );
+          svg.selectAll(".node-label").classed("hidden", false);
+
+          if (closeBtn) {
+            closeBtn.classList.remove("opacity-0", "pointer-events-none");
+            closeBtn.classList.add("opacity-100", "pointer-events-auto");
+          }
+
+          const drag = d3
+            .drag<SVGGElement, GraphNode>()
+            .on("start", (event) => {
+              if (!event.active && simulation)
+                simulation.alphaTarget(0.3).restart();
               event.subject.fx = event.subject.x;
               event.subject.fy = event.subject.y;
             })
-            .on('drag', (event) => {
+            .on("drag", (event) => {
               event.subject.fx = event.x;
               event.subject.fy = event.y;
             })
-            .on('end', (event) => {
+            .on("end", (event) => {
               if (!event.active && simulation) simulation.alphaTarget(0.01);
               event.subject.fx = null;
               event.subject.fy = null;
             });
 
           node.call(drag as any);
-          
-          node.on('mouseover', function(_, hovered: GraphNode) {
-            const connected = new Set<string>();
-            links.forEach(l => {
-              const s = l.source as GraphNode;
-              const t = l.target as GraphNode;
-              if (s.id === hovered.id || t.id === hovered.id) {
-                connected.add(s.id);
-                connected.add(t.id);
-              }
-            });
 
-            node.transition().duration(200).style('opacity', d => connected.has(d.id) ? 1 : 0.1);
-            node.selectAll('.node-label').transition().duration(200).attr('opacity', d => connected.has((d as GraphNode).id) ? 0.8 : 0.4);
-            
-            link.transition().duration(200)
-              .style('stroke-opacity', d => {
-                const s = d.source as GraphNode;
-                const t = d.target as GraphNode;
-                return (s.id === hovered.id || t.id === hovered.id) ? 0.8 : 0.05;
-              })
-              .style('stroke-width', d => {
-                const s = d.source as GraphNode;
-                const t = d.target as GraphNode;
-                return (s.id === hovered.id || t.id === hovered.id) ? 2 : 0.5;
+          node
+            .on("mouseover", function (_, hovered: GraphNode) {
+              const connected = new Set<string>();
+              links.forEach((l) => {
+                const s = l.source as GraphNode;
+                const t = l.target as GraphNode;
+                if (s.id === hovered.id || t.id === hovered.id) {
+                  connected.add(s.id);
+                  connected.add(t.id);
+                }
               });
-            
-            d3.select(this).select('.node-shade').attr('fill', 'var(--accent-color)').attr('fill-opacity', 1);
-            d3.select(this).select('.node-label').attr('opacity', 1).attr('font-weight', 'bold');
-          }).on('mouseout', function() {
-            node.transition().duration(200).style('opacity', 1);
-            node.selectAll('.node-label').transition().duration(200).attr('opacity', 0.4).attr('font-weight', 'normal');
-            
-            link.transition().duration(200)
-              .style('stroke-opacity', 0.2)
-              .style('stroke-width', d => {
-                const s = d.source as GraphNode;
-                const t = d.target as GraphNode;
-                return linkWidth((degree[s.id] + degree[t.id]) / 2 || 1);
-              });
-            
-            d3.select(this).select('.node-shade').attr('fill', 'currentColor').attr('fill-opacity', (d: any) => nodeOpacity(degree[d.id]));
-          });
+
+              node
+                .transition()
+                .duration(200)
+                .style("opacity", (d) => (connected.has(d.id) ? 1 : 0.1));
+              node
+                .selectAll(".node-label")
+                .transition()
+                .duration(200)
+                .attr("opacity", (d) =>
+                  connected.has((d as GraphNode).id) ? 0.8 : 0.4,
+                );
+
+              link
+                .transition()
+                .duration(200)
+                .style("stroke-opacity", (d) => {
+                  const s = d.source as GraphNode;
+                  const t = d.target as GraphNode;
+                  return s.id === hovered.id || t.id === hovered.id
+                    ? 0.8
+                    : 0.05;
+                })
+                .style("stroke-width", (d) => {
+                  const s = d.source as GraphNode;
+                  const t = d.target as GraphNode;
+                  return s.id === hovered.id || t.id === hovered.id ? 2 : 0.5;
+                });
+
+              d3.select(this)
+                .select(".node-shade")
+                .attr("fill", "var(--accent-color)")
+                .attr("fill-opacity", 1);
+              d3.select(this)
+                .select(".node-label")
+                .attr("opacity", 1)
+                .attr("font-weight", "bold");
+            })
+            .on("mouseout", function () {
+              node.transition().duration(200).style("opacity", 1);
+              node
+                .selectAll(".node-label")
+                .transition()
+                .duration(200)
+                .attr("opacity", 0.4)
+                .attr("font-weight", "normal");
+
+              link
+                .transition()
+                .duration(200)
+                .style("stroke-opacity", 0.2)
+                .style("stroke-width", (d) => {
+                  const s = d.source as GraphNode;
+                  const t = d.target as GraphNode;
+                  return linkWidth((degree[s.id] + degree[t.id]) / 2 || 1);
+                });
+
+              d3.select(this)
+                .select(".node-shade")
+                .attr("fill", "currentColor")
+                .attr("fill-opacity", (d: any) => nodeOpacity(degree[d.id]));
+            });
         } else {
-          container.classList.add('pointer-events-none', 'z-0', 'opacity-80');
-          container.classList.remove('opacity-100', 'z-40', 'bg-bg/95', 'backdrop-blur-sm');
-          svg.selectAll('.node-label').classed('hidden', true);
-          
-          if (closeBtn) {
-            closeBtn.classList.add('opacity-0', 'pointer-events-none');
-            closeBtn.classList.remove('opacity-100', 'pointer-events-auto');
+          const newWidth = container.clientWidth;
+          const newHeight = container.clientHeight;
+          currentCx = newWidth > 768 ? newWidth * 0.7 : newWidth / 2;
+          currentCy = newHeight / 2;
+
+          if (simulation) {
+            rotateG
+              .transition()
+              .duration(500)
+              .ease(d3.easeSinInOut)
+              .attr(
+                "transform",
+                `translate(${currentCx}, ${currentCy}) rotate(90)`,
+              );
           }
-          
-          node.on('.drag', null);
-          node.on('mouseover', null).on('mouseout', null);
-          
+
+          container.classList.add("pointer-events-none", "z-0", "opacity-80");
+          container.classList.remove(
+            "opacity-100",
+            "z-40",
+            "bg-bg/95",
+            "backdrop-blur-sm",
+          );
+          svg.selectAll(".node-label").classed("hidden", true);
+
+          if (closeBtn) {
+            closeBtn.classList.add("opacity-0", "pointer-events-none");
+            closeBtn.classList.remove("opacity-100", "pointer-events-auto");
+          }
+
+          node.on(".drag", null);
+          node.on("mouseover", null).on("mouseout", null);
+
           // Reset zoom
-          svg.transition().duration(750).call(zoom.transform as any, d3.zoomIdentity);
+          svg
+            .transition()
+            .duration(750)
+            .call(zoom.transform as any, d3.zoomIdentity);
         }
-        
+
         return isInteractive;
       };
-
     } catch (error) {
-      console.error('Error loading graph data:', error);
+      console.error("Error loading graph data:", error);
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     initGraph();
-    
-    const closeBtn = document.getElementById('close-graph-btn');
-    closeBtn?.addEventListener('click', () => {
+
+    const closeBtn = document.getElementById("close-graph-btn");
+    closeBtn?.addEventListener("click", () => {
       if (window.toggleGraphInteractivity) {
         window.toggleGraphInteractivity();
       }
