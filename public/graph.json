@@ -1,0 +1,2471 @@
+{
+  "nodes": [
+    {
+      "id": "agents-index"
+    },
+    {
+      "id": "entities"
+    },
+    {
+      "id": "khamoshchat-cli-readme"
+    },
+    {
+      "id": "message-flow"
+    },
+    {
+      "id": "wikilinks"
+    },
+    {
+      "id": "SCHEMA"
+    },
+    {
+      "id": "wiki-links"
+    },
+    {
+      "id": "agent-capabilities"
+    },
+    {
+      "id": "SCHEMA|schema"
+    },
+    {
+      "id": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "id": "agent-conventions|Agent Conventions"
+    },
+    {
+      "id": "SCHEMA|SCHEMA"
+    },
+    {
+      "id": "agent-conventions"
+    },
+    {
+      "id": "agent-capabilities|Agent Capabilities"
+    },
+    {
+      "id": "agent-memory-model"
+    },
+    {
+      "id": "wiki-links|Wiki Links"
+    },
+    {
+      "id": "..."
+    },
+    {
+      "id": "page-title"
+    },
+    {
+      "id": "page-title|Display Text"
+    },
+    {
+      "id": "some/path/page"
+    },
+    {
+      "id": "DeZire|DeZire"
+    },
+    {
+      "id": "khamoshchat-ecosystem|Khamoshchat Ecosystem"
+    },
+    {
+      "id": "agents-raw|Agents Raw"
+    },
+    {
+      "id": "DeZire"
+    },
+    {
+      "id": "libsignal-dezire|Libsignal Dezire"
+    },
+    {
+      "id": "daily-news-briefing"
+    },
+    {
+      "id": "perry-agent-p"
+    },
+    {
+      "id": "hermes-agent"
+    },
+    {
+      "id": "hindsight|Hindsight"
+    },
+    {
+      "id": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "id": "hindsight"
+    },
+    {
+      "id": "hermes-agent|Hermes Agent"
+    },
+    {
+      "id": "index"
+    },
+    {
+      "id": "llm-wiki|LLM Wiki"
+    },
+    {
+      "id": "wiki-cross-session-ingestion|Wiki Cross-Session Ingestion"
+    },
+    {
+      "id": "syncthing-diagnostic|Syncthing Diagnostic"
+    },
+    {
+      "id": "obsidian-wiki-conventions|Obsidian Wiki Conventions"
+    },
+    {
+      "id": "agent-memory-model|Agent Memory Model"
+    },
+    {
+      "id": "../../personal/entities/khamoshchat/khamoshchat-ecosystem|personal wiki"
+    },
+    {
+      "id": "SCHEMA|SCHEMA.md"
+    },
+    {
+      "id": "syncthing-diagnostic|Synthing Diagnostic"
+    },
+    {
+      "id": "sources|Sources"
+    },
+    {
+      "id": "log"
+    },
+    {
+      "id": "title|Alias"
+    },
+    {
+      "id": "agents-raw"
+    },
+    {
+      "id": "autonomous-ai-agents-skill"
+    },
+    {
+      "id": "daily-news-briefing-skill"
+    },
+    {
+      "id": "hermes-agent-repo"
+    },
+    {
+      "id": "hermes-hindsight-setup-skill"
+    },
+    {
+      "id": "hindsight-repo"
+    },
+    {
+      "id": "syncthing-diagnostic-skill"
+    },
+    {
+      "id": "wiki-health-report-2026-04-28"
+    },
+    {
+      "id": "../../personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "id": "llm-wiki"
+    },
+    {
+      "id": "obsidian-wiki-conventions"
+    },
+    {
+      "id": "title|display"
+    },
+    {
+      "id": "entities/perry-agent-p"
+    },
+    {
+      "id": "../concepts/foo"
+    },
+    {
+      "id": "khamoshchat/flows/offline-delivery"
+    },
+    {
+      "id": "offline-delivery"
+    },
+    {
+      "id": ""
+    },
+    {
+      "id": "syncthing-diagnostic"
+    },
+    {
+      "id": "wiki-cross-session-ingestion"
+    },
+    {
+      "id": "agents"
+    },
+    {
+      "id": "entities/..."
+    },
+    {
+      "id": "khamoshchat-ecosystem|Khamoshchat"
+    },
+    {
+      "id": "<subpath>"
+    },
+    {
+      "id": "link"
+    },
+    {
+      "id": "x3dh"
+    },
+    {
+      "id": "double-ratchet"
+    },
+    {
+      "id": "khamoshchat-mobile"
+    },
+    {
+      "id": "khamoshchat-api"
+    },
+    {
+      "id": "libsignal-dezire"
+    },
+    {
+      "id": "khamoshchat-ecosystem"
+    },
+    {
+      "id": "user-registration"
+    },
+    {
+      "id": "auth-flow"
+    },
+    {
+      "id": "associated-data"
+    },
+    {
+      "id": "prekey-bundle"
+    },
+    {
+      "id": "vxeddsa"
+    },
+    {
+      "id": "khamoshchat-vs-signal"
+    },
+    {
+      "id": "signal-protocol-overview"
+    },
+    {
+      "id": "aead"
+    },
+    {
+      "id": "agent-workflows"
+    },
+    {
+      "id": "deniability"
+    },
+    {
+      "id": "pqxdh"
+    },
+    {
+      "id": "forward-secrecy"
+    },
+    {
+      "id": "post-compromise-security"
+    },
+    {
+      "id": "khamoshchat-vs-signal#Cryptographic Specification Compliance"
+    },
+    {
+      "id": "hkdf|HKDF-SHA256"
+    },
+    {
+      "id": "hkdf"
+    },
+    {
+      "id": "e2ee-storage-architecture"
+    },
+    {
+      "id": "eddsa"
+    },
+    {
+      "id": "xeddsa-vxeddsa"
+    },
+    {
+      "id": "x25519"
+    },
+    {
+      "id": "kem"
+    },
+    {
+      "id": "ml-kem-braid"
+    },
+    {
+      "id": "mqtt-transport"
+    },
+    {
+      "id": "expo-native-mqtt"
+    },
+    {
+      "id": "kem|KEM"
+    },
+    {
+      "id": "hkdf|KDF"
+    },
+    {
+      "id": "security-audit"
+    },
+    {
+      "id": "vrf"
+    },
+    {
+      "id": "forward-secrecy|Forward Secrecy"
+    },
+    {
+      "id": "deniability|Deniability"
+    },
+    {
+      "id": "x25519|X25519"
+    },
+    {
+      "id": "hkdf|HKDF-SHA512"
+    },
+    {
+      "id": "vrf|VRF"
+    },
+    {
+      "id": "eddsa|EdDSA"
+    },
+    {
+      "id": "expo-google-native-oauth"
+    },
+    {
+      "id": "sesame"
+    },
+    {
+      "id": "khamoshchat-infra"
+    },
+    {
+      "id": "dkmondal-portfolio-2026-04-28"
+    },
+    {
+      "id": "portfolio-ideation-2026-04-28-raw"
+    },
+    {
+      "id": "khamoshchat-cli-design-idea"
+    },
+    {
+      "id": "khamoshchat-cli-idea"
+    },
+    {
+      "id": "khamoshchat-api-status"
+    },
+    {
+      "id": "ml-kem-braid|ML-KEM Braid"
+    },
+    {
+      "id": "sources/khamoshchat-api"
+    },
+    {
+      "id": "sources/khamoshchat-mobile"
+    },
+    {
+      "id": "sources/khamoshchat-infra"
+    },
+    {
+      "id": "sources/libsignal-dezire"
+    },
+    {
+      "id": "sources/expo-native-mqtt"
+    },
+    {
+      "id": "sources/expo-google-native-oauth"
+    },
+    {
+      "id": "xeddsa"
+    },
+    {
+      "id": "sources/sesame"
+    },
+    {
+      "id": "mlkembraid"
+    },
+    {
+      "id": "expo-native-mqtt-raw"
+    },
+    {
+      "id": "khamoshchat-api-raw"
+    },
+    {
+      "id": "khamoshchat-cli-design-notes-raw"
+    },
+    {
+      "id": "khamoshchat-cli-readme-raw"
+    },
+    {
+      "id": "khamoshchat-infra-raw"
+    },
+    {
+      "id": "khamoshchat-mobile-raw"
+    },
+    {
+      "id": "libsignal-dezire-raw"
+    },
+    {
+      "id": "stitch-mcp-setup"
+    },
+    {
+      "id": "stitch-mcp-setup-raw"
+    }
+  ],
+  "links": [
+    {
+      "source": "SCHEMA",
+      "target": "wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "wiki-links"
+    },
+    {
+      "source": "agent-capabilities",
+      "target": "SCHEMA|schema"
+    },
+    {
+      "source": "agent-capabilities",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "agent-capabilities",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "agent-capabilities",
+      "target": "SCHEMA|SCHEMA"
+    },
+    {
+      "source": "agent-conventions",
+      "target": "wiki-links"
+    },
+    {
+      "source": "agent-conventions",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "agent-conventions",
+      "target": "agent-capabilities|Agent Capabilities"
+    },
+    {
+      "source": "agent-conventions",
+      "target": "agent-memory-model"
+    },
+    {
+      "source": "agent-conventions",
+      "target": "wiki-links|Wiki Links"
+    },
+    {
+      "source": "agent-memory-model",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "agent-memory-model",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "wiki-links",
+      "target": "..."
+    },
+    {
+      "source": "wiki-links",
+      "target": "page-title"
+    },
+    {
+      "source": "wiki-links",
+      "target": "page-title|Display Text"
+    },
+    {
+      "source": "wiki-links",
+      "target": "some/path/page"
+    },
+    {
+      "source": "wiki-links",
+      "target": "page-title|Display Text"
+    },
+    {
+      "source": "wiki-links",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "wiki-links",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "wiki-links",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "wiki-links",
+      "target": "khamoshchat-ecosystem|Khamoshchat Ecosystem"
+    },
+    {
+      "source": "wiki-links",
+      "target": "agents-raw|Agents Raw"
+    },
+    {
+      "source": "wiki-links",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "wiki-links",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "DeZire",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "DeZire",
+      "target": "khamoshchat-ecosystem|Khamoshchat Ecosystem"
+    },
+    {
+      "source": "DeZire",
+      "target": "libsignal-dezire|Libsignal Dezire"
+    },
+    {
+      "source": "daily-news-briefing",
+      "target": "perry-agent-p"
+    },
+    {
+      "source": "daily-news-briefing",
+      "target": "hermes-agent"
+    },
+    {
+      "source": "hermes-agent",
+      "target": "hindsight|Hindsight"
+    },
+    {
+      "source": "hermes-agent",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "hermes-agent",
+      "target": "hindsight|Hindsight"
+    },
+    {
+      "source": "hermes-agent",
+      "target": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "source": "hindsight",
+      "target": "hermes-agent|Hermes Agent"
+    },
+    {
+      "source": "hindsight",
+      "target": "agent-memory-model"
+    },
+    {
+      "source": "hindsight",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "hindsight",
+      "target": "hermes-agent|Hermes Agent"
+    },
+    {
+      "source": "perry-agent-p",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "perry-agent-p",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "perry-agent-p",
+      "target": "agent-capabilities|Agent Capabilities"
+    },
+    {
+      "source": "perry-agent-p",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "perry-agent-p",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "index",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "index",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "index",
+      "target": "hermes-agent|Hermes Agent"
+    },
+    {
+      "source": "index",
+      "target": "hindsight|Hindsight"
+    },
+    {
+      "source": "index",
+      "target": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "source": "index",
+      "target": "llm-wiki|LLM Wiki"
+    },
+    {
+      "source": "index",
+      "target": "wiki-cross-session-ingestion|Wiki Cross-Session Ingestion"
+    },
+    {
+      "source": "index",
+      "target": "syncthing-diagnostic|Syncthing Diagnostic"
+    },
+    {
+      "source": "index",
+      "target": "obsidian-wiki-conventions|Obsidian Wiki Conventions"
+    },
+    {
+      "source": "index",
+      "target": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "source": "index",
+      "target": "agent-capabilities|Agent Capabilities"
+    },
+    {
+      "source": "index",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "index",
+      "target": "agent-memory-model|Agent Memory Model"
+    },
+    {
+      "source": "index",
+      "target": "../../personal/entities/khamoshchat/khamoshchat-ecosystem|personal wiki"
+    },
+    {
+      "source": "index",
+      "target": "SCHEMA|SCHEMA.md"
+    },
+    {
+      "source": "index",
+      "target": "syncthing-diagnostic|Synthing Diagnostic"
+    },
+    {
+      "source": "index",
+      "target": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "source": "index",
+      "target": "llm-wiki|LLM Wiki"
+    },
+    {
+      "source": "index",
+      "target": "wiki-cross-session-ingestion|Wiki Cross-Session Ingestion"
+    },
+    {
+      "source": "index",
+      "target": "obsidian-wiki-conventions|Obsidian Wiki Conventions"
+    },
+    {
+      "source": "index",
+      "target": "agents-raw|Agents Raw"
+    },
+    {
+      "source": "index",
+      "target": "sources|Sources"
+    },
+    {
+      "source": "log",
+      "target": "llm-wiki|LLM Wiki"
+    },
+    {
+      "source": "log",
+      "target": "wiki-cross-session-ingestion|Wiki Cross-Session Ingestion"
+    },
+    {
+      "source": "log",
+      "target": "syncthing-diagnostic|Syncthing Diagnostic"
+    },
+    {
+      "source": "log",
+      "target": "obsidian-wiki-conventions|Obsidian Wiki Conventions"
+    },
+    {
+      "source": "log",
+      "target": "daily-news-briefing|Daily News Briefing"
+    },
+    {
+      "source": "log",
+      "target": "title|Alias"
+    },
+    {
+      "source": "log",
+      "target": "wiki-links|Wiki Links"
+    },
+    {
+      "source": "agents-raw",
+      "target": "agent-conventions"
+    },
+    {
+      "source": "index",
+      "target": "DeZire"
+    },
+    {
+      "source": "index",
+      "target": "agents-raw"
+    },
+    {
+      "source": "wiki-health-report-2026-04-28",
+      "target": "../../personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "wiki-health-report-2026-04-28",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "wiki-health-report-2026-04-28",
+      "target": "../../personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "wiki-health-report-2026-04-28",
+      "target": "khamoshchat-ecosystem|Khamoshchat Ecosystem"
+    },
+    {
+      "source": "wiki-health-report-2026-04-28",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "title|display"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "SCHEMA|SCHEMA"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "entities/perry-agent-p"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "../concepts/foo"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "khamoshchat/flows/offline-delivery"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": ""
+    },
+    {
+      "source": "obsidian-wiki-conventions",
+      "target": "some/path/page"
+    },
+    {
+      "source": "agents",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "agents",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "agents",
+      "target": "agent-conventions|Agent Conventions"
+    },
+    {
+      "source": "agents",
+      "target": "page-title|Display Text"
+    },
+    {
+      "source": "agents",
+      "target": "entities/..."
+    },
+    {
+      "source": "agents",
+      "target": "wiki-links|Wiki Links"
+    },
+    {
+      "source": "agents",
+      "target": "page-title|Display Text"
+    },
+    {
+      "source": "agents",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "agents",
+      "target": "some/path/page"
+    },
+    {
+      "source": "agents",
+      "target": "khamoshchat-ecosystem|Khamoshchat"
+    },
+    {
+      "source": "agents",
+      "target": "SCHEMA|SCHEMA"
+    },
+    {
+      "source": "agents",
+      "target": "DeZire|DeZire"
+    },
+    {
+      "source": "agents",
+      "target": "perry-agent-p|Perry Agent P"
+    },
+    {
+      "source": "index",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "index",
+      "target": "log"
+    },
+    {
+      "source": "index",
+      "target": "agents"
+    },
+    {
+      "source": "index",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "log",
+      "target": "wikilinks"
+    },
+    {
+      "source": "log",
+      "target": "wikilinks"
+    },
+    {
+      "source": "log",
+      "target": "<subpath>"
+    },
+    {
+      "source": "log",
+      "target": "link"
+    },
+    {
+      "source": "log",
+      "target": "x3dh"
+    },
+    {
+      "source": "log",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "log",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "log",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "log",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "log",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "log",
+      "target": "message-flow"
+    },
+    {
+      "source": "log",
+      "target": "user-registration"
+    },
+    {
+      "source": "log",
+      "target": "auth-flow"
+    },
+    {
+      "source": "log",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "log",
+      "target": "associated-data"
+    },
+    {
+      "source": "log",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "log",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "log",
+      "target": "khamoshchat-vs-signal"
+    },
+    {
+      "source": "khamoshchat-vs-signal",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "khamoshchat-vs-signal",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-vs-signal",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "khamoshchat-vs-signal",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "aead",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "aead",
+      "target": "associated-data"
+    },
+    {
+      "source": "agent-workflows",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "agent-workflows",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "associated-data",
+      "target": "aead"
+    },
+    {
+      "source": "associated-data",
+      "target": "aead"
+    },
+    {
+      "source": "associated-data",
+      "target": "x3dh"
+    },
+    {
+      "source": "associated-data",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "associated-data",
+      "target": "khamoshchat-vs-signal"
+    },
+    {
+      "source": "deniability",
+      "target": "x3dh"
+    },
+    {
+      "source": "deniability",
+      "target": "x3dh"
+    },
+    {
+      "source": "deniability",
+      "target": "pqxdh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "post-compromise-security"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "post-compromise-security"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "aead"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "khamoshchat-vs-signal#Cryptographic Specification Compliance"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "hkdf|HKDF-SHA256"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "hkdf"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "associated-data"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "x3dh"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "message-flow"
+    },
+    {
+      "source": "double-ratchet",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "e2ee-storage-architecture",
+      "target": "x3dh"
+    },
+    {
+      "source": "e2ee-storage-architecture",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "e2ee-storage-architecture",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "e2ee-storage-architecture",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "eddsa",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "eddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "eddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "forward-secrecy",
+      "target": "hkdf"
+    },
+    {
+      "source": "forward-secrecy",
+      "target": "x3dh"
+    },
+    {
+      "source": "forward-secrecy",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "forward-secrecy",
+      "target": "post-compromise-security"
+    },
+    {
+      "source": "forward-secrecy",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "hkdf",
+      "target": "x25519"
+    },
+    {
+      "source": "hkdf",
+      "target": "x3dh"
+    },
+    {
+      "source": "hkdf",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "hkdf",
+      "target": "aead"
+    },
+    {
+      "source": "hkdf",
+      "target": "x3dh"
+    },
+    {
+      "source": "hkdf",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "kem",
+      "target": "pqxdh"
+    },
+    {
+      "source": "kem",
+      "target": "x3dh"
+    },
+    {
+      "source": "kem",
+      "target": "ml-kem-braid"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "kem"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "ml-kem-braid",
+      "target": "pqxdh"
+    },
+    {
+      "source": "mqtt-transport",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "mqtt-transport",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "mqtt-transport",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "mqtt-transport",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "mqtt-transport",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "post-compromise-security",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "post-compromise-security",
+      "target": "hkdf"
+    },
+    {
+      "source": "post-compromise-security",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "post-compromise-security",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "pqxdh",
+      "target": "x3dh"
+    },
+    {
+      "source": "pqxdh",
+      "target": "kem|KEM"
+    },
+    {
+      "source": "pqxdh",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "pqxdh",
+      "target": "deniability"
+    },
+    {
+      "source": "pqxdh",
+      "target": "deniability"
+    },
+    {
+      "source": "pqxdh",
+      "target": "hkdf|KDF"
+    },
+    {
+      "source": "pqxdh",
+      "target": "kem|KEM"
+    },
+    {
+      "source": "pqxdh",
+      "target": "kem"
+    },
+    {
+      "source": "pqxdh",
+      "target": "x3dh"
+    },
+    {
+      "source": "pqxdh",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "pqxdh",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "security-audit",
+      "target": "x3dh"
+    },
+    {
+      "source": "security-audit",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "security-audit",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "security-audit",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "security-audit",
+      "target": "x3dh"
+    },
+    {
+      "source": "vrf",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "eddsa"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "eddsa"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x25519"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "khamoshchat-vs-signal#Cryptographic Specification Compliance"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x3dh"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x3dh"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x3dh"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "x3dh"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "vxeddsa",
+      "target": "auth-flow"
+    },
+    {
+      "source": "x25519",
+      "target": "x3dh"
+    },
+    {
+      "source": "x25519",
+      "target": "pqxdh"
+    },
+    {
+      "source": "x25519",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "x25519",
+      "target": "x3dh"
+    },
+    {
+      "source": "x25519",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "x25519",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "x3dh",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf|KDF"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf"
+    },
+    {
+      "source": "x3dh",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "x3dh",
+      "target": "forward-secrecy|Forward Secrecy"
+    },
+    {
+      "source": "x3dh",
+      "target": "deniability|Deniability"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "x3dh",
+      "target": "x25519|X25519"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "x3dh",
+      "target": "x25519|X25519"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-vs-signal#Cryptographic Specification Compliance"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf|HKDF-SHA512"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf"
+    },
+    {
+      "source": "x3dh",
+      "target": "hkdf"
+    },
+    {
+      "source": "x3dh",
+      "target": "vrf"
+    },
+    {
+      "source": "x3dh",
+      "target": "vrf"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-vs-signal#Cryptographic Specification Compliance"
+    },
+    {
+      "source": "x3dh",
+      "target": "associated-data"
+    },
+    {
+      "source": "x3dh",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "x3dh",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "x3dh",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "x3dh",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "x3dh",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "x3dh",
+      "target": "message-flow"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "eddsa"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "x25519|X25519"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "vrf|VRF"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "x25519|X25519"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "eddsa"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "vrf"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "eddsa|EdDSA"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "eddsa|EdDSA"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "x3dh"
+    },
+    {
+      "source": "xeddsa-vxeddsa",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "expo-google-native-oauth",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "expo-google-native-oauth",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "expo-google-native-oauth",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "expo-google-native-oauth",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "expo-native-mqtt",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "expo-native-mqtt",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "expo-native-mqtt",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "vrf"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "vrf"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "vrf"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "vrf"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "message-flow"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "user-registration"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "auth-flow"
+    },
+    {
+      "source": "khamoshchat-api",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "sesame"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "pqxdh"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "user-registration"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "auth-flow"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "message-flow"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "vrf"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "associated-data"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "aead"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "khamoshchat-vs-signal"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "expo-google-native-oauth"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "e2ee-storage-architecture"
+    },
+    {
+      "source": "khamoshchat-ecosystem",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "khamoshchat-infra",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "khamoshchat-infra",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "khamoshchat-infra",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "expo-google-native-oauth"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "e2ee-storage-architecture"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "message-flow"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "x3dh"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "agent-workflows"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "message-flow"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "user-registration"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "khamoshchat-mobile",
+      "target": "e2ee-storage-architecture"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "pqxdh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "kem"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "sesame"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x25519"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "vrf"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "vrf"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "vrf"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "vrf"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "agent-workflows"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "x3dh"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "security-audit"
+    },
+    {
+      "source": "libsignal-dezire",
+      "target": "message-flow"
+    },
+    {
+      "source": "sesame",
+      "target": "x3dh"
+    },
+    {
+      "source": "sesame",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "sesame",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "sesame",
+      "target": "x3dh"
+    },
+    {
+      "source": "sesame",
+      "target": "x3dh"
+    },
+    {
+      "source": "sesame",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "sesame",
+      "target": "ml-kem-braid"
+    },
+    {
+      "source": "sesame",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "post-compromise-security"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "deniability"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "x3dh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "sesame"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "pqxdh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "kem"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "deniability"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "x3dh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "pqxdh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "sesame"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "vrf"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "ml-kem-braid"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "x3dh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "x3dh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "sesame"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "pqxdh"
+    },
+    {
+      "source": "signal-protocol-overview",
+      "target": "ml-kem-braid"
+    },
+    {
+      "source": "auth-flow",
+      "target": "user-registration"
+    },
+    {
+      "source": "auth-flow",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "auth-flow",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "auth-flow",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "message-flow",
+      "target": "x3dh"
+    },
+    {
+      "source": "message-flow",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "message-flow",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "message-flow",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "message-flow",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "message-flow",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "offline-delivery",
+      "target": "message-flow"
+    },
+    {
+      "source": "offline-delivery",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "offline-delivery",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "offline-delivery",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "x3dh"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "vrf"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "x3dh"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "x3dh"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "vrf"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "vrf"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "x3dh"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "prekey-bundle",
+      "target": "message-flow"
+    },
+    {
+      "source": "user-registration",
+      "target": "auth-flow"
+    },
+    {
+      "source": "user-registration",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "user-registration",
+      "target": "x3dh"
+    },
+    {
+      "source": "user-registration",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "user-registration",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "dkmondal-portfolio-2026-04-28",
+      "target": "portfolio-ideation-2026-04-28-raw"
+    },
+    {
+      "source": "khamoshchat-cli-design-idea",
+      "target": "khamoshchat-cli-idea"
+    },
+    {
+      "source": "khamoshchat-cli-design-idea",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "khamoshchat-cli-design-idea",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "khamoshchat-cli-idea",
+      "target": "khamoshchat-cli-design-idea"
+    },
+    {
+      "source": "khamoshchat-cli-idea",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "khamoshchat-cli-idea",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-ecosystem"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-infra"
+    },
+    {
+      "source": "index",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "index",
+      "target": "user-registration"
+    },
+    {
+      "source": "index",
+      "target": "auth-flow"
+    },
+    {
+      "source": "index",
+      "target": "message-flow"
+    },
+    {
+      "source": "index",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "index",
+      "target": "prekey-bundle"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-vs-signal"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-cli-idea"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-cli-design-idea"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-api-status"
+    },
+    {
+      "source": "index",
+      "target": "signal-protocol-overview"
+    },
+    {
+      "source": "index",
+      "target": "aead"
+    },
+    {
+      "source": "index",
+      "target": "associated-data"
+    },
+    {
+      "source": "index",
+      "target": "deniability"
+    },
+    {
+      "source": "index",
+      "target": "double-ratchet"
+    },
+    {
+      "source": "index",
+      "target": "e2ee-storage-architecture"
+    },
+    {
+      "source": "index",
+      "target": "eddsa"
+    },
+    {
+      "source": "index",
+      "target": "forward-secrecy"
+    },
+    {
+      "source": "index",
+      "target": "hkdf"
+    },
+    {
+      "source": "index",
+      "target": "kem"
+    },
+    {
+      "source": "index",
+      "target": "ml-kem-braid|ML-KEM Braid"
+    },
+    {
+      "source": "index",
+      "target": "mqtt-transport"
+    },
+    {
+      "source": "index",
+      "target": "post-compromise-security"
+    },
+    {
+      "source": "index",
+      "target": "pqxdh"
+    },
+    {
+      "source": "index",
+      "target": "security-audit"
+    },
+    {
+      "source": "index",
+      "target": "vrf"
+    },
+    {
+      "source": "index",
+      "target": "x25519"
+    },
+    {
+      "source": "index",
+      "target": "x3dh"
+    },
+    {
+      "source": "index",
+      "target": "xeddsa-vxeddsa"
+    },
+    {
+      "source": "index",
+      "target": "vxeddsa"
+    },
+    {
+      "source": "index",
+      "target": "expo-google-native-oauth"
+    },
+    {
+      "source": "index",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "index",
+      "target": "sesame"
+    },
+    {
+      "source": "index",
+      "target": "agent-workflows"
+    },
+    {
+      "source": "index",
+      "target": "sources/khamoshchat-api"
+    },
+    {
+      "source": "index",
+      "target": "sources/khamoshchat-mobile"
+    },
+    {
+      "source": "index",
+      "target": "sources/khamoshchat-infra"
+    },
+    {
+      "source": "index",
+      "target": "sources/libsignal-dezire"
+    },
+    {
+      "source": "index",
+      "target": "sources/expo-native-mqtt"
+    },
+    {
+      "source": "index",
+      "target": "sources/expo-google-native-oauth"
+    },
+    {
+      "source": "index",
+      "target": "xeddsa"
+    },
+    {
+      "source": "index",
+      "target": "sources/sesame"
+    },
+    {
+      "source": "index",
+      "target": "mlkembraid"
+    },
+    {
+      "source": "index",
+      "target": "stitch-mcp-setup"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-api"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-mobile"
+    },
+    {
+      "source": "index",
+      "target": "libsignal-dezire"
+    },
+    {
+      "source": "index",
+      "target": "expo-native-mqtt"
+    },
+    {
+      "source": "index",
+      "target": "expo-google-native-oauth"
+    },
+    {
+      "source": "index",
+      "target": "khamoshchat-infra"
+    },
+    {
+      "source": "index",
+      "target": "xeddsa"
+    },
+    {
+      "source": "index",
+      "target": "sesame"
+    },
+    {
+      "source": "index",
+      "target": "mlkembraid"
+    },
+    {
+      "source": "index",
+      "target": "portfolio-ideation-2026-04-28-raw"
+    },
+    {
+      "source": "khamoshchat-api-status",
+      "target": "offline-delivery"
+    },
+    {
+      "source": "khamoshchat-api-status",
+      "target": "security-audit"
+    },
+    {
+      "source": "khamoshchat-api-status",
+      "target": "khamoshchat-api"
+    }
+  ]
+}
