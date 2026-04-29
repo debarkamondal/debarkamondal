@@ -1,0 +1,51 @@
+---
+const coreRepos = [
+  { name: 'khamoshchat-mobile', description: 'End-to-end encrypted messaging app built with React Native and Expo.', tech: ['React Native', 'Expo', 'TypeScript'] },
+  { name: 'libsignal-dezire', description: 'Signal Protocol implementation optimized for KhamoshChat architecture.', tech: ['Rust', 'Crypto'] },
+  { name: 'khamoshchat-api', description: 'Backend service handling key exchange and message routing.', tech: ['Rust', 'Axum', 'Redis'] }
+];
+
+const supportingRepos = [
+  { name: 'expo-native-mqtt', description: 'Native MQTT client bindings for Expo applications.', tech: ['Kotlin', 'Swift', 'Expo'] },
+  { name: 'expo-google-native-oauth', description: 'Native Google OAuth integration for Expo.', tech: ['React Native', 'OAuth'] },
+  { name: 'khamoshchat-infra', description: 'Infrastructure as Code for deploying KhamoshChat services.', tech: ['Terraform', 'AWS'] }
+];
+---
+
+<section id="ecosystem" class="max-w-[1000px] mx-auto px-8 py-24 border-t border-border">
+  <h2 class="text-3xl font-mono font-bold mb-12">KhamoshChat Ecosystem</h2>
+  
+  <div class="mb-16">
+    <h3 class="text-xl font-mono text-accent mb-6">Core Components</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {coreRepos.map(repo => (
+        <div class="border border-border p-6 bg-card hover:border-accent transition-colors group">
+          <h4 class="font-mono font-bold text-lg mb-2 group-hover:text-accent transition-colors">{repo.name}</h4>
+          <p class="text-sm text-text/70 mb-4 h-16">{repo.description}</p>
+          <div class="flex flex-wrap gap-2">
+            {repo.tech.map(t => (
+              <span class="text-xs font-mono px-2 py-1 bg-text/5">{t}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-xl font-mono text-accent mb-6">Supporting Libraries & Infra</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {supportingRepos.map(repo => (
+        <div class="border border-border p-6 bg-card hover:border-accent transition-colors group">
+          <h4 class="font-mono font-bold text-lg mb-2 group-hover:text-accent transition-colors">{repo.name}</h4>
+          <p class="text-sm text-text/70 mb-4 h-16">{repo.description}</p>
+          <div class="flex flex-wrap gap-2">
+            {repo.tech.map(t => (
+              <span class="text-xs font-mono px-2 py-1 bg-text/5">{t}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

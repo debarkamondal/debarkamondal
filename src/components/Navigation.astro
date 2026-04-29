@@ -1,0 +1,20 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border">
+  <div class="max-w-[1000px] mx-auto px-8 h-16 flex items-center justify-between">
+    <a href="#" class="font-mono font-bold text-lg tracking-tight">Debarka Mondal</a>
+    
+    <nav class="flex items-center gap-6 text-sm font-medium">
+      <a href="#ecosystem" class="hover:text-accent transition-colors">Ecosystem</a>
+      <a href="#open-source" class="hover:text-accent transition-colors">Open Source</a>
+      <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+      <span class="text-accent/50 cursor-not-allowed" title="Coming soon">Blog</span>
+      
+      <div class="w-px h-4 bg-border mx-2"></div>
+      
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>

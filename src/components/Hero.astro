@@ -1,0 +1,47 @@
+---
+import KnowledgeGraph from "./KnowledgeGraph.astro";
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center pt-16 overflow-hidden"
+>
+  <KnowledgeGraph />
+
+  <div class="max-w-[1000px] mx-4 px-8 w-full z-10">
+    <div class="max-w-xl text-left pointer-events-none">
+      <h1
+        class="text-5xl md:text-7xl font-mono font-bold tracking-tighter mb-4"
+      >
+        Debarka Mondal
+      </h1>
+      <h2 class="text-xl md:text-2xl text-accent mb-6">Software Engineer</h2>
+      <p class="text-lg md:text-xl mb-10 text-text/80">
+        <q
+          >Knowledge is being spread everywhere,<br /> grab it from wherever you can.</q
+        >
+        &mdash; 3 Idiots
+      </p>
+
+      <div class="pointer-events-auto">
+        <button
+          id="explore-btn"
+          class="border border-text px-8 py-3 font-mono text-sm hover:bg-text hover:text-bg transition-all duration-300 relative overflow-hidden group"
+        >
+          <span class="relative z-10">Get Knowledge</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const exploreBtn = document.getElementById("explore-btn");
+
+  exploreBtn?.addEventListener("click", () => {
+    // Call the global function defined in KnowledgeGraph.astro
+    if (window.toggleGraphInteractivity) {
+      window.toggleGraphInteractivity();
+    }
+  });
+</script>

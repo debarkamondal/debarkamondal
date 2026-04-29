@@ -1,17 +1,38 @@
 ---
 import "../styles/global.css";
-const { title } = Astro.props;
+import Navigation from "../components/Navigation.astro";
+
+const { title = "Debarka Mondal" } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+        <meta name="description" content="Portfolio of Debarka Mondal" />
+        <title>{title}</title>
+        
+        <!-- Theme init script to avoid flash of wrong theme -->
+        <script is:inline>
+          const theme = (() => {
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+              return localStorage.getItem('theme');
+            }
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              return 'dark';
+            }
+            return 'light';
+          })();
+          
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        </script>
     </head>
-    <body>
-        <article>
+    <body class="font-sans antialiased">
+        <Navigation />
+        <main>
             <slot />
-        </article>
+        </main>
     </body>
 </html>
