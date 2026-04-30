@@ -8,10 +8,19 @@ import KnowledgeGraph from "./KnowledgeGraph.astro";
 >
   <KnowledgeGraph />
 
-  <div class="max-w-[1000px] mx-4 px-8 w-full z-10">
-    <div class="max-w-xl text-left pointer-events-none">
+  <div
+    class="max-w-[1440px] mx-4 sm:mx-8 md:mx-auto px-4 md:px-8 w-full z-10 pointer-events-none"
+  >
+    <div class="max-w-xl text-center md:text-left pointer-events-none">
+      <div class="mb-8 select-none">
+        <img
+          src="/signature.png"
+          alt="Signature"
+          class="h-36 md:h-52 rotate-[5deg] w-auto dark:invert opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105 cursor-default mx-auto -my-16 md:mx-0"
+        />
+      </div>
       <h1
-        class="text-5xl md:text-7xl font-mono font-bold tracking-tighter mb-4"
+        class="text-3xl md:text-7xl font-mono font-bold tracking-tighter mb-4"
       >
         Debarka Mondal
       </h1>

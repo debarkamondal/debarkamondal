@@ -1,0 +1,2721 @@
+{
+  "nodes": [
+    {
+      "id": "SCHEMA",
+      "label": "schema",
+      "weight": 13
+    },
+    {
+      "id": "agents/concepts/wiki-links",
+      "label": "Wiki Links",
+      "weight": 20
+    },
+    {
+      "id": "agents/concepts/agent-capabilities",
+      "label": "Agent Capabilities",
+      "weight": 7
+    },
+    {
+      "id": "agents/entities/perry-agent-p",
+      "label": "Perry Agent P",
+      "weight": 20
+    },
+    {
+      "id": "agents/concepts/agent-conventions",
+      "label": "Agent Conventions",
+      "weight": 13
+    },
+    {
+      "id": "agents/concepts/agent-memory-model",
+      "label": "Agent Memory Model",
+      "weight": 5
+    },
+    {
+      "id": "...",
+      "label": "...",
+      "weight": 3
+    },
+    {
+      "id": "page-title",
+      "label": "Display Text",
+      "weight": 5
+    },
+    {
+      "id": "page",
+      "label": "page",
+      "weight": 3
+    },
+    {
+      "id": "agents/entities/DeZire",
+      "label": "DeZire",
+      "weight": 11
+    },
+    {
+      "id": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "label": "khamoshchat-ecosystem",
+      "weight": 40
+    },
+    {
+      "id": "agents/raw/agents-raw",
+      "label": "agents-raw",
+      "weight": 4
+    },
+    {
+      "id": "personal/raw/sources/libsignal-dezire",
+      "label": "libsignal-dezire",
+      "weight": 19
+    },
+    {
+      "id": "agents/entities/daily-news-briefing",
+      "label": "daily-news-briefing",
+      "weight": 2
+    },
+    {
+      "id": "agents/entities/hermes-agent",
+      "label": "Hermes Agent",
+      "weight": 8
+    },
+    {
+      "id": "agents/entities/hindsight",
+      "label": "Hindsight",
+      "weight": 8
+    },
+    {
+      "id": "agents/skills/daily-news-briefing",
+      "label": "daily-news-briefing",
+      "weight": 5
+    },
+    {
+      "id": "agents/index",
+      "label": "index",
+      "weight": 26
+    },
+    {
+      "id": "agents/skills/llm-wiki",
+      "label": "llm-wiki",
+      "weight": 3
+    },
+    {
+      "id": "agents/skills/wiki-cross-session-ingestion",
+      "label": "wiki-cross-session-ingestion",
+      "weight": 3
+    },
+    {
+      "id": "agents/skills/syncthing-diagnostic",
+      "label": "syncthing-diagnostic",
+      "weight": 3
+    },
+    {
+      "id": "agents/skills/hermes-hindsight-setup",
+      "label": "hermes-hindsight-setup",
+      "weight": 2
+    },
+    {
+      "id": "agents/skills/obsidian-wiki-conventions",
+      "label": "obsidian-wiki-conventions",
+      "weight": 11
+    },
+    {
+      "id": "agents/skills/wiki-broken-link-checker",
+      "label": "wiki-broken-link-checker",
+      "weight": 8
+    },
+    {
+      "id": "agents/skills/wiki-ingest-github-repo",
+      "label": "wiki-ingest-github-repo",
+      "weight": 4
+    },
+    {
+      "id": "sources",
+      "label": "Sources",
+      "weight": 1
+    },
+    {
+      "id": "agents/log",
+      "label": "log",
+      "weight": 9
+    },
+    {
+      "id": "title",
+      "label": "Alias",
+      "weight": 2
+    },
+    {
+      "id": "agents/raw/sources/autonomous-ai-agents-skill",
+      "label": "autonomous-ai-agents-skill",
+      "weight": 1
+    },
+    {
+      "id": "agents/raw/sources/daily-news-briefing-skill",
+      "label": "daily-news-briefing-skill",
+      "weight": 1
+    },
+    {
+      "id": "agents/raw/sources/hermes-agent-repo",
+      "label": "hermes-agent-repo",
+      "weight": 1
+    },
+    {
+      "id": "agents/raw/sources/hermes-hindsight-setup-skill",
+      "label": "hermes-hindsight-setup-skill",
+      "weight": 4
+    },
+    {
+      "id": "agents/raw/sources/hindsight-repo",
+      "label": "hindsight-repo",
+      "weight": 1
+    },
+    {
+      "id": "agents/raw/sources/index",
+      "label": "index",
+      "weight": 10
+    },
+    {
+      "id": "agents/raw/sources/syncthing-diagnostic-skill",
+      "label": "syncthing-diagnostic-skill",
+      "weight": 1
+    },
+    {
+      "id": "agents/raw/sources/wiki-broken-link-checker-skill",
+      "label": "wiki-broken-link-checker-skill",
+      "weight": 2
+    },
+    {
+      "id": "agents/raw/sources/wiki-ingest-github-repo-skill",
+      "label": "wiki-ingest-github-repo-skill",
+      "weight": 2
+    },
+    {
+      "id": "agents/raw/wiki-health-report-2026-04-28",
+      "label": "wiki-health-report-2026-04-28",
+      "weight": 5
+    },
+    {
+      "id": "agents/raw/wiki-health-report-2026-04-29",
+      "label": "wiki-health-report-2026-04-29",
+      "weight": 7
+    },
+    {
+      "id": "khamoshchat-ecosystem\\",
+      "label": "Khamoshchat Ecosystem",
+      "weight": 1
+    },
+    {
+      "id": "SCHEMA\\",
+      "label": "SCHEMA.md",
+      "weight": 2
+    },
+    {
+      "id": "syncthing-diagnostic\\",
+      "label": "Synthing Diagnostic",
+      "weight": 1
+    },
+    {
+      "id": "foo",
+      "label": "foo",
+      "weight": 1
+    },
+    {
+      "id": "personal/flows/offline-delivery",
+      "label": "offline-delivery",
+      "weight": 14
+    },
+    {
+      "id": "link",
+      "label": "link",
+      "weight": 2
+    },
+    {
+      "id": "x25519\\",
+      "label": "X25519",
+      "weight": 1
+    },
+    {
+      "id": "personal/comparisons/khamoshchat-vs-signal",
+      "label": "khamoshchat-vs-signal",
+      "weight": 9
+    },
+    {
+      "id": "agents",
+      "label": "agents",
+      "weight": 14
+    },
+    {
+      "id": "index",
+      "label": "index",
+      "weight": 4
+    },
+    {
+      "id": "personal/log",
+      "label": "log",
+      "weight": 1
+    },
+    {
+      "id": "log",
+      "label": "log",
+      "weight": 18
+    },
+    {
+      "id": "wikilinks",
+      "label": "wikilinks",
+      "weight": 2
+    },
+    {
+      "id": "<subpath>",
+      "label": "<subpath>",
+      "weight": 1
+    },
+    {
+      "id": "personal/concepts/x3dh",
+      "label": "x3dh",
+      "weight": 81
+    },
+    {
+      "id": "personal/concepts/double-ratchet",
+      "label": "double-ratchet",
+      "weight": 50
+    },
+    {
+      "id": "personal/raw/sources/khamoshchat-mobile",
+      "label": "khamoshchat-mobile",
+      "weight": 21
+    },
+    {
+      "id": "personal/raw/sources/khamoshchat-api",
+      "label": "khamoshchat-api",
+      "weight": 25
+    },
+    {
+      "id": "personal/flows/message-flow",
+      "label": "message-flow",
+      "weight": 17
+    },
+    {
+      "id": "personal/flows/user-registration",
+      "label": "user-registration",
+      "weight": 11
+    },
+    {
+      "id": "personal/flows/auth-flow",
+      "label": "auth-flow",
+      "weight": 10
+    },
+    {
+      "id": "personal/concepts/associated-data",
+      "label": "associated-data",
+      "weight": 11
+    },
+    {
+      "id": "personal/flows/prekey-bundle",
+      "label": "prekey-bundle",
+      "weight": 21
+    },
+    {
+      "id": "personal/concepts/vxeddsa",
+      "label": "vxeddsa",
+      "weight": 36
+    },
+    {
+      "id": "personal/entities/signal-protocol",
+      "label": "signal-protocol",
+      "weight": 35
+    },
+    {
+      "id": "personal/concepts/aead",
+      "label": "aead",
+      "weight": 8
+    },
+    {
+      "id": "personal/concepts/agent-workflows",
+      "label": "agent-workflows",
+      "weight": 5
+    },
+    {
+      "id": "personal/concepts/deniability",
+      "label": "Deniability",
+      "weight": 9
+    },
+    {
+      "id": "personal/concepts/pqxdh",
+      "label": "pqxdh",
+      "weight": 21
+    },
+    {
+      "id": "personal/concepts/forward-secrecy",
+      "label": "Forward Secrecy",
+      "weight": 13
+    },
+    {
+      "id": "personal/concepts/post-compromise-security",
+      "label": "post-compromise-security",
+      "weight": 9
+    },
+    {
+      "id": "personal/concepts/hkdf",
+      "label": "KDF",
+      "weight": 18
+    },
+    {
+      "id": "personal/concepts/e2ee-storage-architecture",
+      "label": "e2ee-storage-architecture",
+      "weight": 8
+    },
+    {
+      "id": "personal/concepts/eddsa",
+      "label": "EdDSA",
+      "weight": 10
+    },
+    {
+      "id": "personal/concepts/xeddsa-vxeddsa",
+      "label": "xeddsa-vxeddsa",
+      "weight": 18
+    },
+    {
+      "id": "personal/concepts/x25519",
+      "label": "X25519",
+      "weight": 19
+    },
+    {
+      "id": "personal/concepts/kem",
+      "label": "KEM",
+      "weight": 15
+    },
+    {
+      "id": "personal/concepts/ml-kem-braid",
+      "label": "ML-KEM Braid",
+      "weight": 14
+    },
+    {
+      "id": "personal/concepts/mqtt-transport",
+      "label": "mqtt-transport",
+      "weight": 11
+    },
+    {
+      "id": "personal/raw/sources/expo-native-mqtt",
+      "label": "expo-native-mqtt",
+      "weight": 7
+    },
+    {
+      "id": "personal/concepts/security-audit",
+      "label": "security-audit",
+      "weight": 8
+    },
+    {
+      "id": "personal/concepts/vrf",
+      "label": "VRF",
+      "weight": 33
+    },
+    {
+      "id": "personal/entities/expo-google-native-oauth",
+      "label": "expo-google-native-oauth",
+      "weight": 4
+    },
+    {
+      "id": "personal/entities/expo-native-mqtt",
+      "label": "expo-native-mqtt",
+      "weight": 3
+    },
+    {
+      "id": "personal/entities/khamoshchat/khamoshchat-api",
+      "label": "khamoshchat-api",
+      "weight": 11
+    },
+    {
+      "id": "personal/raw/sources/sesame",
+      "label": "sesame",
+      "weight": 8
+    },
+    {
+      "id": "personal/raw/sources/expo-google-native-oauth",
+      "label": "expo-google-native-oauth",
+      "weight": 5
+    },
+    {
+      "id": "personal/entities/khamoshchat/khamoshchat-infra",
+      "label": "khamoshchat-infra",
+      "weight": 3
+    },
+    {
+      "id": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "label": "khamoshchat-mobile",
+      "weight": 17
+    },
+    {
+      "id": "personal/entities/khamoshchat/libsignal-dezire",
+      "label": "libsignal-dezire",
+      "weight": 28
+    },
+    {
+      "id": "personal/entities/sesame",
+      "label": "sesame",
+      "weight": 8
+    },
+    {
+      "id": "personal/ideas/dkmondal-portfolio-2026-04-28",
+      "label": "dkmondal-portfolio-2026-04-28",
+      "weight": 0
+    },
+    {
+      "id": "personal/ideas/khamoshchat-cli-design-idea",
+      "label": "khamoshchat-cli-design-idea",
+      "weight": 5
+    },
+    {
+      "id": "personal/ideas/khamoshchat-cli-idea",
+      "label": "khamoshchat-cli-idea",
+      "weight": 5
+    },
+    {
+      "id": "personal/index",
+      "label": "index",
+      "weight": 47
+    },
+    {
+      "id": "personal/raw/sources/khamoshchat-infra",
+      "label": "khamoshchat-infra",
+      "weight": 3
+    },
+    {
+      "id": "personal/status/khamoshchat-api-status",
+      "label": "khamoshchat-api-status",
+      "weight": 4
+    },
+    {
+      "id": "personal/raw/sources/xeddsa",
+      "label": "xeddsa",
+      "weight": 2
+    },
+    {
+      "id": "personal/raw/sources/mlkembraid",
+      "label": "mlkembraid",
+      "weight": 2
+    },
+    {
+      "id": "personal/raw/khamoshchat/expo-native-mqtt-raw",
+      "label": "expo-native-mqtt-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/khamoshchat-api-raw",
+      "label": "khamoshchat-api-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/khamoshchat-cli-design-notes-raw",
+      "label": "khamoshchat-cli-design-notes-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/khamoshchat-cli-readme-raw",
+      "label": "khamoshchat-cli-readme-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/khamoshchat-infra-raw",
+      "label": "khamoshchat-infra-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/khamoshchat-mobile-raw",
+      "label": "khamoshchat-mobile-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/khamoshchat/libsignal-dezire-raw",
+      "label": "libsignal-dezire-raw",
+      "weight": 0
+    },
+    {
+      "id": "personal/raw/sources/index",
+      "label": "index",
+      "weight": 13
+    },
+    {
+      "id": "personal/raw/sources/stitch-mcp-setup",
+      "label": "stitch-mcp-setup",
+      "weight": 1
+    },
+    {
+      "id": "personal/raw/sources/portfolio-ideation-2026-04-28-raw",
+      "label": "portfolio-ideation-2026-04-28-raw",
+      "weight": 1
+    },
+    {
+      "id": "personal/raw/sources/wiki-health-report-2026-04-28",
+      "label": "wiki-health-report-2026-04-28",
+      "weight": 1
+    },
+    {
+      "id": "personal/raw/sources/wiki-health-report-2026-04-29",
+      "label": "wiki-health-report-2026-04-29",
+      "weight": 1
+    },
+    {
+      "id": "personal/raw/stitch-mcp/stitch-mcp-setup-raw",
+      "label": "stitch-mcp-setup-raw",
+      "weight": 0
+    }
+  ],
+  "links": [
+    {
+      "source": "SCHEMA",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "SCHEMA",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "agents/concepts/agent-capabilities",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/concepts/agent-capabilities",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/concepts/agent-capabilities",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/concepts/agent-capabilities",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/concepts/agent-conventions",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "agents/concepts/agent-conventions",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/concepts/agent-conventions",
+      "target": "agents/concepts/agent-capabilities"
+    },
+    {
+      "source": "agents/concepts/agent-conventions",
+      "target": "agents/concepts/agent-memory-model"
+    },
+    {
+      "source": "agents/concepts/agent-conventions",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "agents/concepts/agent-memory-model",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/concepts/agent-memory-model",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "..."
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "page-title"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "page-title"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "page"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "page-title"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/raw/agents-raw"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/concepts/wiki-links",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/entities/DeZire",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/entities/DeZire",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/entities/DeZire",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "agents/entities/daily-news-briefing",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/entities/daily-news-briefing",
+      "target": "agents/entities/hermes-agent"
+    },
+    {
+      "source": "agents/entities/hermes-agent",
+      "target": "agents/entities/hindsight"
+    },
+    {
+      "source": "agents/entities/hermes-agent",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/entities/hermes-agent",
+      "target": "agents/entities/hindsight"
+    },
+    {
+      "source": "agents/entities/hermes-agent",
+      "target": "agents/skills/daily-news-briefing"
+    },
+    {
+      "source": "agents/entities/hindsight",
+      "target": "agents/entities/hermes-agent"
+    },
+    {
+      "source": "agents/entities/hindsight",
+      "target": "agents/concepts/agent-memory-model"
+    },
+    {
+      "source": "agents/entities/hindsight",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/entities/hindsight",
+      "target": "agents/entities/hermes-agent"
+    },
+    {
+      "source": "agents/entities/perry-agent-p",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/entities/perry-agent-p",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/entities/perry-agent-p",
+      "target": "agents/concepts/agent-capabilities"
+    },
+    {
+      "source": "agents/entities/perry-agent-p",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/entities/perry-agent-p",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/entities/hermes-agent"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/entities/hindsight"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/daily-news-briefing"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/llm-wiki"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-cross-session-ingestion"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/syncthing-diagnostic"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/hermes-hindsight-setup"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/obsidian-wiki-conventions"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/daily-news-briefing"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-broken-link-checker"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-ingest-github-repo"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/concepts/agent-capabilities"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/concepts/agent-memory-model"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/syncthing-diagnostic"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/hermes-hindsight-setup"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/daily-news-briefing"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/llm-wiki"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-cross-session-ingestion"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/obsidian-wiki-conventions"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-broken-link-checker"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/skills/wiki-ingest-github-repo"
+    },
+    {
+      "source": "agents/index",
+      "target": "agents/raw/agents-raw"
+    },
+    {
+      "source": "agents/index",
+      "target": "sources"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/wiki-broken-link-checker"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/wiki-ingest-github-repo"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/llm-wiki"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/wiki-cross-session-ingestion"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/syncthing-diagnostic"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/obsidian-wiki-conventions"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/skills/daily-news-briefing"
+    },
+    {
+      "source": "agents/log",
+      "target": "title"
+    },
+    {
+      "source": "agents/log",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "agents/raw/agents-raw",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents/raw/sources/hermes-hindsight-setup-skill",
+      "target": "agents/raw/sources/hermes-hindsight-setup-skill"
+    },
+    {
+      "source": "agents/raw/sources/hermes-hindsight-setup-skill",
+      "target": "agents/entities/hindsight"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/hermes-agent-repo"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/hindsight-repo"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/daily-news-briefing-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/autonomous-ai-agents-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/hermes-hindsight-setup-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/syncthing-diagnostic-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/wiki-broken-link-checker-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/sources/wiki-ingest-github-repo-skill"
+    },
+    {
+      "source": "agents/raw/sources/index",
+      "target": "agents/raw/agents-raw"
+    },
+    {
+      "source": "agents/raw/sources/wiki-broken-link-checker-skill",
+      "target": "agents/skills/wiki-broken-link-checker"
+    },
+    {
+      "source": "agents/raw/sources/wiki-ingest-github-repo-skill",
+      "target": "agents/skills/wiki-ingest-github-repo"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-28",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-28",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-28",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-28",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-28",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "khamoshchat-ecosystem\\"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "SCHEMA\\"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "SCHEMA\\"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "syncthing-diagnostic\\"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents/raw/wiki-health-report-2026-04-29",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "title"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "foo"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "agents/skills/obsidian-wiki-conventions",
+      "target": "page"
+    },
+    {
+      "source": "agents/skills/wiki-broken-link-checker",
+      "target": "link"
+    },
+    {
+      "source": "agents/skills/wiki-broken-link-checker",
+      "target": "x25519\\"
+    },
+    {
+      "source": "agents/skills/wiki-broken-link-checker",
+      "target": "..."
+    },
+    {
+      "source": "agents/skills/wiki-broken-link-checker",
+      "target": "personal/comparisons/khamoshchat-vs-signal"
+    },
+    {
+      "source": "agents",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents",
+      "target": "agents/concepts/agent-conventions"
+    },
+    {
+      "source": "agents",
+      "target": "page-title"
+    },
+    {
+      "source": "agents",
+      "target": "..."
+    },
+    {
+      "source": "agents",
+      "target": "agents/concepts/wiki-links"
+    },
+    {
+      "source": "agents",
+      "target": "page-title"
+    },
+    {
+      "source": "agents",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "agents",
+      "target": "page"
+    },
+    {
+      "source": "agents",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "agents",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "agents",
+      "target": "agents/entities/DeZire"
+    },
+    {
+      "source": "agents",
+      "target": "agents/entities/perry-agent-p"
+    },
+    {
+      "source": "index",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "index",
+      "target": "personal/log"
+    },
+    {
+      "source": "index",
+      "target": "agents"
+    },
+    {
+      "source": "index",
+      "target": "SCHEMA"
+    },
+    {
+      "source": "log",
+      "target": "wikilinks"
+    },
+    {
+      "source": "log",
+      "target": "wikilinks"
+    },
+    {
+      "source": "log",
+      "target": "<subpath>"
+    },
+    {
+      "source": "log",
+      "target": "link"
+    },
+    {
+      "source": "log",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "log",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "log",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "log",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "log",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "log",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "log",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "log",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "log",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "log",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "log",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "log",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "log",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "log",
+      "target": "personal/comparisons/khamoshchat-vs-signal"
+    },
+    {
+      "source": "personal/comparisons/khamoshchat-vs-signal",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/comparisons/khamoshchat-vs-signal",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/comparisons/khamoshchat-vs-signal",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/comparisons/khamoshchat-vs-signal",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/concepts/aead",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/aead",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "personal/concepts/agent-workflows",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/agent-workflows",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/concepts/associated-data",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/concepts/associated-data",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/concepts/associated-data",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/associated-data",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/associated-data",
+      "target": "personal/comparisons/khamoshchat-vs-signal"
+    },
+    {
+      "source": "personal/concepts/deniability",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/deniability",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/deniability",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/post-compromise-security"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/post-compromise-security"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/concepts/double-ratchet",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/e2ee-storage-architecture",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/e2ee-storage-architecture",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/e2ee-storage-architecture",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/concepts/e2ee-storage-architecture",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/eddsa",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/concepts/eddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/eddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/forward-secrecy",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/forward-secrecy",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/forward-secrecy",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/forward-secrecy",
+      "target": "personal/concepts/post-compromise-security"
+    },
+    {
+      "source": "personal/concepts/forward-secrecy",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/hkdf",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/kem",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/concepts/kem",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/kem",
+      "target": "personal/concepts/ml-kem-braid"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/ml-kem-braid",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/concepts/mqtt-transport",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/mqtt-transport",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/mqtt-transport",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/mqtt-transport",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/mqtt-transport",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/concepts/post-compromise-security",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/post-compromise-security",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/post-compromise-security",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/concepts/post-compromise-security",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/pqxdh",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/security-audit",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/security-audit",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/concepts/security-audit",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/security-audit",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/security-audit",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/vrf",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/vxeddsa",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/concepts/x25519",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/concepts/x3dh",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/concepts/xeddsa-vxeddsa",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/expo-google-native-oauth",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/expo-google-native-oauth",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/expo-google-native-oauth",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/expo-google-native-oauth",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/entities/expo-native-mqtt",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/expo-native-mqtt",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/expo-native-mqtt",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-api",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/comparisons/khamoshchat-vs-signal"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/raw/sources/expo-google-native-oauth"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/e2ee-storage-architecture"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-ecosystem",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-infra",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-infra",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-infra",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/expo-google-native-oauth"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/e2ee-storage-architecture"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/agent-workflows"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/entities/khamoshchat/khamoshchat-mobile",
+      "target": "personal/concepts/e2ee-storage-architecture"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/agent-workflows"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/concepts/security-audit"
+    },
+    {
+      "source": "personal/entities/khamoshchat/libsignal-dezire",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/concepts/ml-kem-braid"
+    },
+    {
+      "source": "personal/entities/sesame",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/post-compromise-security"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/ml-kem-braid"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/entities/signal-protocol",
+      "target": "personal/concepts/ml-kem-braid"
+    },
+    {
+      "source": "personal/flows/auth-flow",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "personal/flows/auth-flow",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/flows/auth-flow",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/flows/auth-flow",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/flows/message-flow",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/offline-delivery",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/flows/offline-delivery",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/flows/offline-delivery",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/offline-delivery",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/flows/prekey-bundle",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/flows/user-registration",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "personal/flows/user-registration",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/flows/user-registration",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/flows/user-registration",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/flows/user-registration",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-design-idea",
+      "target": "personal/ideas/khamoshchat-cli-idea"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-design-idea",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-design-idea",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-idea",
+      "target": "personal/ideas/khamoshchat-cli-design-idea"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-idea",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "personal/ideas/khamoshchat-cli-idea",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/entities/khamoshchat/khamoshchat-ecosystem"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-infra"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/flows/user-registration"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/flows/auth-flow"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/flows/message-flow"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/flows/prekey-bundle"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/comparisons/khamoshchat-vs-signal"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/ideas/khamoshchat-cli-idea"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/ideas/khamoshchat-cli-design-idea"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/status/khamoshchat-api-status"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/entities/signal-protocol"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/aead"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/associated-data"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/deniability"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/double-ratchet"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/e2ee-storage-architecture"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/eddsa"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/forward-secrecy"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/hkdf"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/kem"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/ml-kem-braid"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/mqtt-transport"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/post-compromise-security"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/pqxdh"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/security-audit"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/vrf"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/x25519"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/x3dh"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/xeddsa-vxeddsa"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/vxeddsa"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/expo-google-native-oauth"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/concepts/agent-workflows"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/khamoshchat-infra"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/expo-google-native-oauth"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/xeddsa"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/index",
+      "target": "personal/raw/sources/mlkembraid"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/stitch-mcp-setup"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/khamoshchat-api"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/khamoshchat-mobile"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/libsignal-dezire"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/expo-native-mqtt"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/expo-google-native-oauth"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/khamoshchat-infra"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/xeddsa"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/sesame"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/mlkembraid"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/portfolio-ideation-2026-04-28-raw"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/wiki-health-report-2026-04-28"
+    },
+    {
+      "source": "personal/raw/sources/index",
+      "target": "personal/raw/sources/wiki-health-report-2026-04-29"
+    },
+    {
+      "source": "personal/status/khamoshchat-api-status",
+      "target": "personal/flows/offline-delivery"
+    },
+    {
+      "source": "personal/status/khamoshchat-api-status",
+      "target": "personal/concepts/security-audit"
+    },
+    {
+      "source": "personal/status/khamoshchat-api-status",
+      "target": "personal/raw/sources/khamoshchat-api"
+    }
+  ]
+}

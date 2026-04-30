@@ -6,48 +6,120 @@ import ThemeToggle from "./ThemeToggle.astro";
   class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border"
 >
   <div
-    class="max-w-[1600px] mx-auto px-8 h-16 flex items-center justify-between"
+    class="max-w-[1440px] mx-auto px-4 md:px-8 h-16 flex items-center justify-between"
   >
-    <a href="#" class="font-mono font-bold text-lg tracking-tight"
-      >Debarka Mondal</a
+    <a href="#" class="font-mono font-bold text-lg tracking-tight relative z-50"
+      >dkmondal.in</a
     >
 
-    <nav class="flex items-center gap-6 text-sm font-medium">
-      <a href="#ecosystem" class="hover:text-accent transition-colors"
-        >Ecosystem</a
+    <div class="flex items-center gap-2 md:gap-4">
+      <nav
+        id="nav-menu"
+        class="fixed inset-0 bg-bg/95 backdrop-blur-md flex-col items-center justify-center gap-8 text-lg font-medium hidden md:static md:flex md:flex-row md:bg-transparent md:h-auto md:gap-6 md:text-sm z-40"
       >
-      <a href="#open-source" class="hover:text-accent transition-colors"
-        >Open Source</a
-      >
-      <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-      <span class="text-accent/50 cursor-not-allowed" title="Coming soon"
-        >Blog</span
-      >
-
-      <a
-        href="mailto:debarkamondal@gmail.com"
-        class="flex items-center gap-2 border border-text px-4 py-1.5 font-mono text-xs hover:bg-text hover:text-bg transition-all duration-300 ml-2"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-mail"
-          ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+        <a
+          href="#ecosystem"
+          class="nav-link hover:text-accent transition-colors">Ecosystem</a
         >
-        Hire Me
-      </a>
+        <a
+          href="#open-source"
+          class="nav-link hover:text-accent transition-colors">Open Source</a
+        >
+        <a href="#contact" class="nav-link hover:text-accent transition-colors"
+          >Contact</a
+        >
+        <span class="text-accent/50 cursor-not-allowed" title="Coming soon"
+          >Blog</span
+        >
 
-      <div class="w-px h-4 bg-border mx-2"></div>
+        <a
+          href="mailto:debarkamondal@gmail.com"
+          class="nav-link flex items-center gap-2 border border-text px-4 py-1.5 font-mono text-xs hover:bg-text hover:text-bg transition-all duration-300 md:ml-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-mail"
+            ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+          >
+          Hire Me
+        </a>
+      </nav>
 
-      <ThemeToggle />
-    </nav>
+      <div class="hidden md:block w-px h-4 bg-border mx-2"></div>
+
+      <div class="relative z-50 flex items-center">
+        <ThemeToggle />
+
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden ml-2 p-2 text-text hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            id="menu-icon"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg
+            id="close-icon"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
+
+<script>
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const navMenu = document.getElementById("nav-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  const toggleMenu = () => {
+    navMenu?.classList.toggle("hidden");
+    navMenu?.classList.toggle("flex");
+    document.body.classList.toggle("overflow-hidden");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  };
+
+  mobileMenuBtn?.addEventListener("click", toggleMenu);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 768) {
+        toggleMenu();
+      }
+    });
+  });
+</script>
