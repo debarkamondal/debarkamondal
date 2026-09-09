@@ -1,22 +1,100 @@
 ---
-const contributions = [
+const pullRequests = [
   {
-    title: "rmqtt / rmqtt",
-    role: "Contributor (PR #372)",
+    repo: "stephenberry / opus-pure",
+    prNumber: 3,
+    title: "Remove hot-path allocations, bound Ogg packet reassembly, harden NEON dispatch",
+    status: "Merged",
     description:
-      "A scalable, distributed MQTT message broker written in Rust for IoT in the 5G era. Implemented core offline message event support for the WebHook plugin, enabling real-time lifecycle event handling and message delivery across distributed clusters.",
-    tech: ["Rust", "MQTT", "Distributed Systems", "IoT"],
-    repoUrl: "https://github.com/rmqtt/rmqtt",
-    prUrl: "https://github.com/rmqtt/rmqtt/pull/372",
+      "Eliminated per-packet and per-frame heap allocations on decode/analysis paths via Cow<'a, [u8]> and scratch buffers, bounded Ogg packet reassembly to 16 MiB against DoS, and hardened ARM NEON SIMD dispatch.",
+    tech: ["Rust", "SIMD / NEON", "Ogg / Opus", "Zero-Copy"],
+    url: "https://github.com/stephenberry/opus-pure/pull/3",
+    repoUrl: "https://github.com/stephenberry/opus-pure",
+    commits: [
+      {
+        sha: "4ac0830",
+        msg: "fix(security, perf): resolve security vulnerabilities and hot-path allocations",
+      },
+    ],
   },
   {
-    title: "opus-pure",
-    role: "Creator",
+    repo: "rmqtt / rmqtt",
+    prNumber: 381,
+    title: "Reduce docker build context from 11.4GB to 119MB and fix build deps",
+    status: "Merged",
     description:
-      "A pure-Rust implementation of the Opus audio codec (RFC 6716) with Ogg encapsulation (RFC 7845). Encoder and decoder supporting SILK, CELT, and hybrid modes with zero C code, zero FFI, and zero external dependencies.",
-    tech: ["Rust", "Audio Codec", "RFC 6716", "docs.rs"],
-    repoUrl: "https://github.com/debarkamondal/opus-pure",
-    docsUrl: "https://docs.rs/opus-pure",
+      "Reduced Docker build context by 99% (from 11.4GB down to 119.5MB) via targeted .dockerignore exclusions, resolved Linux CI workflow dependencies, and fixed compilation warnings in subscription matching logic.",
+    tech: ["Rust", "Docker", "CI/CD", "Optimization"],
+    url: "https://github.com/rmqtt/rmqtt/pull/381",
+    repoUrl: "https://github.com/rmqtt/rmqtt",
+    commits: [
+      {
+        sha: "fab71a1",
+        msg: "fix: update .dockerignore to include target directory while preserving build binaries",
+      },
+      {
+        sha: "4dac9d0",
+        msg: "fix: compile error due to warnings about subscription matching logic and redundant iterator",
+      },
+      {
+        sha: "6974c07",
+        msg: "ci: added system dependencies for Linux builds in CI workflow",
+      },
+      {
+        sha: "cd9635e",
+        msg: "fix: docker build error caused by outdated, latest and missing deps",
+      },
+      {
+        sha: "1031629",
+        msg: "fix: Recuded docker build context from 11.4GB to 119.54MB",
+      },
+    ],
+  },
+  {
+    repo: "rmqtt / rmqtt",
+    prNumber: 372,
+    title: "Add offline_message event support to webhook plugin",
+    status: "Merged",
+    description:
+      "Implemented offline message lifecycle forwarding in the WebHook plugin, enabling webhook listeners to process notifications when messages are queued for offline MQTT clients.",
+    tech: ["Rust", "MQTT", "Webhooks", "Distributed Systems"],
+    url: "https://github.com/rmqtt/rmqtt/pull/372",
+    repoUrl: "https://github.com/rmqtt/rmqtt",
+    commits: [
+      {
+        sha: "4b92c4a",
+        msg: "feat: add offline_message event support to webhook plugin and updated documentation",
+      },
+    ],
+  },
+  {
+    repo: "Lidarr / Lidarr",
+    prNumber: 5750,
+    title: "Custom indexer search schema implementation",
+    status: "Active",
+    description:
+      "Implemented customizable indexer search pattern schemas in C#/.NET, enabling user-configured query criteria handling for albums and artists rather than hardcoded indexer query templates.",
+    tech: ["C#", ".NET", "SQLite", "Indexer API"],
+    url: "https://github.com/Lidarr/Lidarr/pull/5750",
+    repoUrl: "https://github.com/Lidarr/Lidarr",
+    commits: [
+      {
+        sha: "5c57f79",
+        msg: "fix: resolve migration version conflict",
+      },
+      {
+        sha: "144d6d7",
+        msg: "chore: revert indexer-specific changes for minimal PR",
+      },
+      {
+        sha: "eb42421",
+        msg: "refactor: improve indexer search query generation and criteria handling for albums and artists",
+      },
+      {
+        sha: "c6b44f4",
+        msg: "feat: custom indexer search schema implemented",
+      },
+    ],
   },
 ];
 ---
@@ -26,19 +104,26 @@ const contributions = [
   class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 md:py-24 border-t border-border"
 >
   <div class="mb-12">
-    <h2 class="text-3xl font-mono font-bold tracking-tight">Open Source & Systems</h2>
+    <span class="text-xs font-mono text-accent/80 tracking-widest block mb-2 font-semibold">
+      02 // OPEN SOURCE & UPSTREAM CONTRIBUTIONS
+    </span>
+    <h2 class="text-3xl font-mono font-bold tracking-tight">Pull Requests & Upstream Work</h2>
     <p class="text-text/70 mt-2 text-sm max-w-xl">
-      Upstream contributions to core infrastructure projects and standalone systems crates built in Rust.
+      Upstream contributions to core infrastructure, audio codecs, and distributed systems. Hover or tap any PR to inspect its individual commits, or click to view the pull request on GitHub.
     </p>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
     {
-      contributions.map((item) => (
-        <div class="border border-border p-6 md:p-8 bg-card hover:border-accent transition-colors relative overflow-hidden flex flex-col justify-between">
-          <div class="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+      pullRequests.map((pr) => (
+        <div
+          class="pr-card border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative overflow-hidden flex flex-col justify-between group text-left cursor-pointer select-none md:select-auto"
+          data-url={pr.url}
+          data-expanded="false"
+        >
+          <div class="absolute top-0 right-0 p-6 opacity-[0.03] dark:opacity-[0.05] pointer-events-none group-hover:opacity-[0.08] group-hover:scale-105 transition-all duration-500">
             <svg
-              class="w-32 h-32"
+              class="w-28 h-28"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,37 +136,54 @@ const contributions = [
             </svg>
           </div>
 
-          <div class="relative z-10">
-            <div class="flex items-center justify-between gap-4 mb-3">
-              <h3 class="font-mono text-2xl font-bold">{item.title}</h3>
-              <span class="text-xs font-mono px-2.5 py-1 border border-accent/40 text-accent">
-                {item.role}
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-accent group-hover:text-text font-semibold tracking-wide transition-colors truncate">
+                {pr.repo}
+              </span>
+              <span class="text-xs font-mono text-text/60 group-hover:text-text tracking-wide transition-colors flex-shrink-0">
+                // PR #{pr.prNumber} · {pr.status.toUpperCase()}
               </span>
             </div>
-            <p class="text-text/80 mb-6 text-sm leading-relaxed">
-              {item.description}
+
+            <h3 class="font-mono text-lg font-bold tracking-tight text-text group-hover:text-text transition-colors mb-2 leading-snug">
+              {pr.title}
+            </h3>
+
+            <p class="text-text/75 group-hover:text-text/95 transition-colors mb-4 text-xs leading-relaxed">
+              {pr.description}
             </p>
           </div>
 
-          <div class="relative z-10 pt-4 border-t border-border/50">
-            <div class="flex flex-wrap gap-2 mb-6">
-              {item.tech.map((t) => (
-                <span class="text-xs font-mono px-2 py-0.5 bg-text/5 text-text/80">
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              {pr.tech.map((t) => (
+                <span class="text-xs font-mono text-text/60 group-hover:text-text/80 bg-text/5 group-hover:bg-text/10 px-2 py-0.5 transition-colors">
                   {t}
                 </span>
               ))}
             </div>
 
-            <div class="flex items-center gap-4 text-sm font-mono">
+            <div class="flex items-center justify-between text-xs font-mono pt-3 border-t border-border/60">
               <a
-                href={item.repoUrl}
+                href={pr.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 hover:text-accent transition-colors"
+                class="pr-direct-link inline-flex items-center gap-1.5 font-semibold text-text/80 hover:text-text transition-colors group/link py-1"
               >
-                <span>Repository</span>
+                <span>View PR #{pr.prNumber}</span>
+                <span class="text-[11px] group-hover/link:translate-x-0.5 transition-transform">↗</span>
+              </a>
+
+              <button
+                type="button"
+                class="commits-toggle inline-flex items-center gap-2 border border-border/80 hover:border-text/80 bg-card hover:bg-white dark:hover:bg-[#202024] px-2.5 py-1 text-text/80 hover:text-text font-semibold transition-all duration-200 focus:outline-none cursor-pointer"
+                aria-label={`Toggle commits for PR #${pr.prNumber}`}
+                aria-expanded="false"
+              >
+                <span class="text-xs">{pr.commits.length} {pr.commits.length === 1 ? 'commit' : 'commits'}</span>
                 <svg
-                  class="w-3.5 h-3.5"
+                  class="w-3.5 h-3.5 text-accent group-hover:text-text group-hover:rotate-180 group-data-[expanded=true]:rotate-180 transition-transform duration-300 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -90,61 +192,33 @@ const contributions = [
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    stroke-width="2.5"
+                    d="M19 9l-7 7-7-7"
                   ></path>
                 </svg>
-              </a>
+              </button>
+            </div>
 
-              {item.prUrl && (
-                <a
-                  href={item.prUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1.5 text-accent hover:underline transition-colors"
-                >
-                  <span>Pull Request #372</span>
-                  <svg
-                    class="w-3.5 h-3.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    ></path>
-                  </svg>
-                </a>
-              )}
-
-              {item.docsUrl && (
-                <a
-                  href={item.docsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1.5 text-accent hover:underline transition-colors"
-                >
-                  <span>docs.rs Documentation</span>
-                  <svg
-                    class="w-3.5 h-3.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    ></path>
-                  </svg>
-                </a>
-              )}
+            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-data-[expanded=true]:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out overflow-hidden">
+              <div class="overflow-hidden">
+                <div class="pt-3 mt-3 border-t border-dashed border-border/70">
+                  <div class="text-[11px] font-mono text-accent tracking-wider font-semibold mb-2">
+                    // COMMITS IN PR ({pr.commits.length})
+                  </div>
+                  <div class="space-y-1.5 font-mono text-xs">
+                    {pr.commits.map((c) => (
+                      <div class="flex items-start gap-2 py-1 px-1.5 -mx-1.5 bg-text/[0.03] group-hover:bg-text/[0.06] transition-colors">
+                        <span class="text-accent font-semibold flex-shrink-0">
+                          {c.sha}
+                        </span>
+                        <span class="text-text/75 group-hover:text-text/95 truncate" title={c.msg}>
+                          {c.msg}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -152,3 +226,59 @@ const contributions = [
     }
   </div>
 </section>
+
+<script>
+  function initPRCards() {
+    const cards = document.querySelectorAll<HTMLElement>('.pr-card');
+    const isTouchDevice = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    cards.forEach((card) => {
+      const toggleBtn = card.querySelector<HTMLButtonElement>('.commits-toggle');
+
+      const toggleExpand = (e?: Event) => {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const isCurrentlyExpanded = card.getAttribute('data-expanded') === 'true';
+        const nextState = !isCurrentlyExpanded;
+        card.setAttribute('data-expanded', nextState ? 'true' : 'false');
+        if (toggleBtn) {
+          toggleBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+        }
+      };
+
+      // Toggle button explicitly expands/collapses commits on tap/click
+      toggleBtn?.addEventListener('click', toggleExpand);
+
+      // Card click handling
+      card.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+
+        // If clicking a direct PR link to GitHub, allow default navigation
+        if (target.closest('.pr-direct-link')) {
+          return;
+        }
+
+        // If clicking toggle button, already handled
+        if (target.closest('.commits-toggle')) {
+          return;
+        }
+
+        // On mobile touch devices: tap anywhere on card to toggle commits
+        if (isTouchDevice) {
+          toggleExpand();
+        } else {
+          // On desktop mouse: clicking anywhere on card opens PR in new tab
+          const url = card.dataset.url;
+          if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }
+      });
+    });
+  }
+
+  initPRCards();
+  document.addEventListener('astro:page-load', initPRCards);
+</script>

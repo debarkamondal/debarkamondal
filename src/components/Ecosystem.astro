@@ -6,6 +6,7 @@ const coreRepos = [
       "Cross-platform end-to-end encrypted messaging application built with React Native and Expo.",
     tech: ["React Native", "Expo", "TypeScript", "E2EE"],
     url: "https://github.com/deez-in/deezchatz-mobile",
+    version: "v0.1.0",
   },
   {
     name: "deezchatz-api",
@@ -13,6 +14,7 @@ const coreRepos = [
       "High-throughput backend service handling cryptographic key exchange, sessions, and real-time message routing.",
     tech: ["Rust", "Axum", "Redis", "Distributed"],
     url: "https://github.com/deez-in/deezchatz-api",
+    version: "v0.1.0",
   },
   {
     name: "libsignal-dezire",
@@ -20,6 +22,7 @@ const coreRepos = [
       "Pure-Rust Signal Protocol implementation (X3DH, Double Ratchet) engineered for high performance and cross-platform FFI.",
     tech: ["Rust", "Signal Protocol", "Cryptography", "FFI"],
     url: "https://github.com/deez-in/libsignal-dezire",
+    version: "v0.1.0",
   },
   {
     name: "deezchatz-infra",
@@ -27,6 +30,7 @@ const coreRepos = [
       "Ansible playbooks and infrastructure automation for provisioning and maintaining the DeezChatz cloud infrastructure.",
     tech: ["Ansible", "IaC", "Linux", "DevOps"],
     url: "https://github.com/deez-in/deezchatz-infra",
+    version: "v0.1.0",
   },
 ];
 
@@ -37,6 +41,7 @@ const supportingRepos = [
       "Native Expo audio alternative to record & play .ogg files with bidirectional PCM to OPUS encoding and decoding.",
     tech: ["Rust", "Swift", "Kotlin", "Audio"],
     url: "https://github.com/deez-in/expo-audio-opus",
+    version: "v0.1.0",
   },
   {
     name: "expo-libsignal-dezire",
@@ -44,6 +49,7 @@ const supportingRepos = [
       "Expo React Native native module wrapper for libsignal-dezire providing cryptographic primitives to iOS and Android.",
     tech: ["Swift", "React Native", "Expo", "E2EE"],
     url: "https://github.com/deez-in/expo-libsignal-dezire",
+    version: "v0.1.0",
   },
   {
     name: "expo-native-mqtt",
@@ -51,6 +57,7 @@ const supportingRepos = [
       "High-performance native MQTT client bindings for Expo applications wrapping HiveMQ (Android) and CocoaMQTT (iOS).",
     tech: ["Kotlin", "Swift", "Expo", "MQTT"],
     url: "https://github.com/deez-in/expo-native-mqtt",
+    version: "v0.1.0",
   },
   {
     name: "expo-google-native-oauth",
@@ -58,6 +65,7 @@ const supportingRepos = [
       "Native Google OAuth module for Expo React Native utilizing GIDSignIn on iOS and Credential Manager on Android.",
     tech: ["TypeScript", "OAuth", "Android", "iOS"],
     url: "https://github.com/deez-in/expo-google-native-oauth",
+    version: "v0.1.0",
   },
 ];
 ---
@@ -68,20 +76,23 @@ const supportingRepos = [
 >
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
     <div>
+      <span class="text-xs font-mono text-accent/80 tracking-widest block mb-2 font-semibold">
+        01 // ECOSYSTEM
+      </span>
       <h2 class="text-3xl font-mono font-bold tracking-tight">Deez Ecosystem</h2>
       <p class="text-text/70 mt-2 text-sm max-w-xl">
-        A privacy-first, end-to-end encrypted messaging ecosystem built across systems-level Rust backends, cryptographic protocol implementations, and high-performance native Expo mobile modules.
+        A privacy-first, end-to-end encrypted messaging ecosystem built across systems-level Rust backends, cryptographic protocol implementations, and high-performance native Expo mobile modules. Click any card for repository release information and live commits.
       </p>
     </div>
     <a
       href="https://github.com/deez-in"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-xs font-mono border border-border px-3 py-1.5 hover:border-accent hover:text-accent transition-colors self-start md:self-auto group"
+      class="inline-flex items-center gap-2 text-xs font-mono border border-border px-3.5 py-2 hover:border-text hover:text-text transition-colors self-start md:self-auto group bg-card/50"
     >
       <span>github.com/deez-in</span>
       <svg
-        class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+        class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-accent group-hover:text-text"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -98,9 +109,8 @@ const supportingRepos = [
   </div>
 
   <div class="mb-16">
-    <div class="flex items-center gap-3 mb-6">
-      <h3 class="text-xl font-mono text-accent">Core Infrastructure & Services</h3>
-      <span class="text-xs font-mono px-2 py-0.5 border border-border text-text/60">Core</span>
+    <div class="mb-6">
+      <h3 class="text-lg font-mono font-semibold text-text">Core Infrastructure & Services</h3>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {
@@ -109,15 +119,20 @@ const supportingRepos = [
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="border border-border p-6 bg-card hover:border-accent transition-all duration-300 group flex flex-col justify-between block"
+            class="repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer"
+            data-repo-name={repo.name}
+            data-repo-url={repo.url}
+            data-repo-desc={repo.description}
+            data-repo-tech={JSON.stringify(repo.tech)}
+            data-repo-version={repo.version}
           >
             <div>
-              <div class="flex items-center justify-between mb-2">
-                <h4 class="font-mono font-bold text-lg group-hover:text-accent transition-colors truncate">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="font-mono font-bold text-base text-text group-hover:text-text transition-colors truncate">
                   {repo.name}
                 </h4>
                 <svg
-                  class="w-4 h-4 text-text/40 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
+                  class="w-4 h-4 text-text/30 group-hover:text-text group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -131,11 +146,15 @@ const supportingRepos = [
                   ></path>
                 </svg>
               </div>
-              <p class="text-sm text-text/70 mb-4 min-h-[4rem]">{repo.description}</p>
+              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4rem] leading-relaxed">
+                {repo.description}
+              </p>
             </div>
-            <div class="flex flex-wrap gap-2 pt-2 border-t border-border/50">
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
               {repo.tech.map((t) => (
-                <span class="text-xs font-mono px-2 py-0.5 bg-text/5 text-text/80">{t}</span>
+                <span class="text-xs font-mono text-text/60 group-hover:text-text/80 bg-text/5 group-hover:bg-text/10 px-2 py-0.5 transition-colors">
+                  {t}
+                </span>
               ))}
             </div>
           </a>
@@ -145,11 +164,10 @@ const supportingRepos = [
   </div>
 
   <div>
-    <div class="flex items-center gap-3 mb-6">
-      <h3 class="text-xl font-mono text-accent">
+    <div class="mb-6">
+      <h3 class="text-lg font-mono font-semibold text-text">
         Supporting Native Libraries & Modules
       </h3>
-      <span class="text-xs font-mono px-2 py-0.5 border border-border text-text/60">Bridges</span>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {
@@ -158,15 +176,20 @@ const supportingRepos = [
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="border border-border p-6 bg-card hover:border-accent transition-all duration-300 group flex flex-col justify-between block"
+            class="repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer"
+            data-repo-name={repo.name}
+            data-repo-url={repo.url}
+            data-repo-desc={repo.description}
+            data-repo-tech={JSON.stringify(repo.tech)}
+            data-repo-version={repo.version}
           >
             <div>
-              <div class="flex items-center justify-between mb-2">
-                <h4 class="font-mono font-bold text-lg group-hover:text-accent transition-colors truncate">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="font-mono font-bold text-base text-text group-hover:text-text transition-colors truncate">
                   {repo.name}
                 </h4>
                 <svg
-                  class="w-4 h-4 text-text/40 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
+                  class="w-4 h-4 text-text/30 group-hover:text-text group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -180,11 +203,15 @@ const supportingRepos = [
                   ></path>
                 </svg>
               </div>
-              <p class="text-sm text-text/70 mb-4 min-h-[4rem]">{repo.description}</p>
+              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4rem] leading-relaxed">
+                {repo.description}
+              </p>
             </div>
-            <div class="flex flex-wrap gap-2 pt-2 border-t border-border/50">
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
               {repo.tech.map((t) => (
-                <span class="text-xs font-mono px-2 py-0.5 bg-text/5 text-text/80">{t}</span>
+                <span class="text-xs font-mono text-text/60 group-hover:text-text/80 bg-text/5 group-hover:bg-text/10 px-2 py-0.5 transition-colors">
+                  {t}
+                </span>
               ))}
             </div>
           </a>
@@ -193,3 +220,44 @@ const supportingRepos = [
     </div>
   </div>
 </section>
+
+<script>
+  function setupRepoTriggers() {
+    const cards = document.querySelectorAll(".repo-modal-trigger");
+    cards.forEach((card) => {
+      card.addEventListener("click", (e) => {
+        const mouseEvent = e as MouseEvent;
+        // Allow ctrl/cmd/middle-click to open direct GitHub link in new tab
+        if (
+          mouseEvent.ctrlKey ||
+          mouseEvent.metaKey ||
+          mouseEvent.shiftKey ||
+          mouseEvent.button !== 0
+        ) {
+          return;
+        }
+
+        e.preventDefault();
+        const el = card as HTMLElement;
+        const name = el.dataset.repoName || "";
+        const url = el.dataset.repoUrl || el.getAttribute("href") || "";
+        const description = el.dataset.repoDesc || "";
+        const version = el.dataset.repoVersion || "v0.1.0-dev";
+        const tech = el.dataset.repoTech ? JSON.parse(el.dataset.repoTech) : [];
+
+        if (typeof (window as any).openRepoModal === "function") {
+          (window as any).openRepoModal({
+            name,
+            url,
+            description,
+            tech,
+            defaultVersion: version,
+          });
+        }
+      });
+    });
+  }
+
+  setupRepoTriggers();
+  document.addEventListener("astro:page-load", setupRepoTriggers);
+</script>

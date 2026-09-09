@@ -1,0 +1,453 @@
+---
+// RepoModal.astro: Reusable dialog popup showing repository details and dynamic GitHub commits
+---
+
+<dialog
+  id="repo-modal"
+  class="backdrop:bg-black/70 backdrop:backdrop-blur-xs bg-transparent p-0 m-auto max-w-xl w-[92vw] focus:outline-none z-50 fixed inset-0 overflow-visible"
+>
+  <div
+    class="border border-border bg-card text-text shadow-2xl p-6 md:p-8 relative flex flex-col justify-between max-h-[88vh] overflow-y-auto"
+  >
+    <!-- Header: Name & Close button -->
+    <div>
+      <div class="flex items-start justify-between gap-4 mb-2">
+        <h3
+          id="modal-repo-name"
+          class="font-mono text-xl md:text-2xl font-bold tracking-tight text-text truncate"
+        >
+          // repository-name
+        </h3>
+        <button
+          id="modal-close-btn"
+          type="button"
+          class="border border-border hover:border-text px-2.5 py-1 text-xs font-mono text-text/70 hover:text-text bg-card transition-colors flex-shrink-0 cursor-pointer"
+          aria-label="Close dialog"
+        >
+          ✕ ESC
+        </button>
+      </div>
+
+      <!-- URL / Link -->
+      <div class="mb-4">
+        <a
+          id="modal-repo-url"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-mono text-xs text-accent hover:text-text inline-flex items-center gap-1.5 transition-colors break-all"
+        >
+          <span id="modal-repo-url-text">https://github.com/...</span>
+          <span class="text-[11px]">↗</span>
+        </a>
+      </div>
+
+      <!-- Latest Version / Release -->
+      <div
+        class="flex items-center gap-2.5 font-mono text-xs border-y border-border/60 py-2.5 mb-4"
+      >
+        <span class="text-text/50 uppercase tracking-wider font-semibold text-[11px]"
+          >VERSION / RELEASE:</span
+        >
+        <span
+          id="modal-repo-version"
+          class="text-text font-bold bg-text/5 px-2 py-0.5 border border-border/60 text-xs"
+        >
+          v0.1.0-dev
+        </span>
+      </div>
+
+      <!-- Short Description -->
+      <div class="mb-4">
+        <p
+          id="modal-repo-desc"
+          class="text-xs md:text-sm text-text/80 leading-relaxed font-mono"
+        >
+          Repository description goes here.
+        </p>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div id="modal-repo-tech" class="flex flex-wrap gap-1.5 mb-6">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Dynamic Commits Section -->
+    <div class="pt-4 border-t border-border/60">
+      <div class="flex items-center justify-between font-mono text-xs text-accent mb-3">
+        <span class="font-semibold tracking-wider">// LATEST COMMITS (3)</span>
+        <span id="modal-cache-status" class="text-[10px] text-text/50 font-normal"></span>
+      </div>
+
+      <div id="modal-commits-container" class="space-y-2 font-mono text-xs">
+        <!-- Commits injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Footer Actions -->
+    <div
+      class="mt-6 pt-4 border-t border-border/60 flex items-center justify-between font-mono text-xs"
+    >
+      <a
+        id="modal-direct-github-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border border-text px-4 py-2 bg-text text-bg hover:bg-card hover:text-text transition-colors font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+      >
+        <span>Open on GitHub</span>
+        <span>↗</span>
+      </a>
+      <button
+        id="modal-dismiss-btn"
+        type="button"
+        class="border border-border hover:border-text px-4 py-2 text-text/70 hover:text-text transition-colors cursor-pointer"
+      >
+        Dismiss
+      </button>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Smooth pop-in animation */
+  dialog[open] {
+    animation: dialog-pop 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes dialog-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.97) translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+</style>
+
+<script>
+  interface CommitItem {
+    sha: string;
+    message: string;
+    date: string;
+    url: string;
+  }
+
+  interface CacheEntry {
+    timestamp: number;
+    version: string;
+    commits: CommitItem[];
+  }
+
+  const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes cache duration per user request
+
+  function initRepoModal() {
+    const dialog = document.getElementById("repo-modal") as HTMLDialogElement | null;
+    if (!dialog) return;
+
+    const modalRepoName = document.getElementById("modal-repo-name");
+    const modalRepoUrl = document.getElementById("modal-repo-url") as HTMLAnchorElement | null;
+    const modalRepoUrlText = document.getElementById("modal-repo-url-text");
+    const modalRepoVersion = document.getElementById("modal-repo-version");
+    const modalRepoDesc = document.getElementById("modal-repo-desc");
+    const modalRepoTech = document.getElementById("modal-repo-tech");
+    const modalCommitsContainer = document.getElementById("modal-commits-container");
+    const modalCacheStatus = document.getElementById("modal-cache-status");
+    const modalDirectGithubLink = document.getElementById("modal-direct-github-link") as HTMLAnchorElement | null;
+    const modalCloseBtn = document.getElementById("modal-close-btn");
+    const modalDismissBtn = document.getElementById("modal-dismiss-btn");
+
+    const closeModal = () => {
+      if (dialog.open) {
+        dialog.close();
+      }
+    };
+
+    modalCloseBtn?.addEventListener("click", closeModal);
+    modalDismissBtn?.addEventListener("click", closeModal);
+
+    // Close when clicking outside dialog content
+    dialog.addEventListener("click", (e) => {
+      const rect = dialog.getBoundingClientRect();
+      const isInDialog =
+        rect.top <= e.clientY &&
+        e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.left + rect.width;
+      if (!isInDialog) {
+        closeModal();
+      }
+    });
+
+    // Helper: Parse GitHub owner & repo
+    function parseGitHubUrl(url: string): { owner: string; repo: string } | null {
+      try {
+        const u = new URL(url);
+        if (u.hostname === "github.com") {
+          const parts = u.pathname.split("/").filter(Boolean);
+          if (parts.length >= 2) {
+            return { owner: parts[0], repo: parts[1] };
+          }
+        }
+      } catch {
+        // invalid URL
+      }
+      return null;
+    }
+
+    // Render commits in container
+    function renderCommits(commits: CommitItem[], isCached: boolean) {
+      if (!modalCommitsContainer) return;
+
+      if (modalCacheStatus) {
+        modalCacheStatus.textContent = isCached ? "cached (30m)" : "live";
+      }
+
+      if (!commits || commits.length === 0) {
+        modalCommitsContainer.innerHTML = `
+          <div class="p-3 bg-text/[0.03] border border-border/50 text-text/60">
+            // No recent commits found.
+          </div>
+        `;
+        return;
+      }
+
+      modalCommitsContainer.innerHTML = commits
+        .map(
+          (c) => `
+          <a
+            href="${c.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-start gap-2.5 p-2.5 bg-text/[0.02] hover:bg-text/[0.06] border border-border/50 hover:border-text/50 transition-all group/commit cursor-pointer"
+            title="${c.message.replace(/"/g, "&quot;")}"
+          >
+            <span class="text-accent group-hover/commit:text-text font-semibold flex-shrink-0">
+              ${c.sha}
+            </span>
+            <div class="min-w-0 flex-1">
+              <p class="text-text/80 group-hover/commit:text-text truncate text-xs leading-snug">
+                ${c.message}
+              </p>
+              <span class="text-[10px] text-text/40 block mt-0.5">${c.date}</span>
+            </div>
+            <span class="text-text/30 group-hover/commit:text-text text-[11px] ml-auto flex-shrink-0">↗</span>
+          </a>
+        `
+        )
+        .join("");
+    }
+
+    // Render loading state
+    function renderLoading() {
+      if (!modalCommitsContainer) return;
+      if (modalCacheStatus) modalCacheStatus.textContent = "fetching...";
+      modalCommitsContainer.innerHTML = `
+        <div class="space-y-2">
+          <div class="p-3 bg-text/[0.03] border border-border/40 animate-pulse text-text/50 flex items-center gap-2">
+            <span class="text-accent animate-spin inline-block">⟳</span>
+            <span>// pulling latest 3 commits from GitHub...</span>
+          </div>
+          <div class="h-10 bg-text/[0.02] border border-border/30 animate-pulse"></div>
+          <div class="h-10 bg-text/[0.02] border border-border/30 animate-pulse"></div>
+        </div>
+      `;
+    }
+
+    // Render error state with direct commit link
+    function renderError(repoUrl: string, errorMsg: string) {
+      if (!modalCommitsContainer) return;
+      if (modalCacheStatus) modalCacheStatus.textContent = "fallback";
+      modalCommitsContainer.innerHTML = `
+        <div class="p-3 bg-text/[0.03] border border-border/60 text-xs">
+          <div class="text-text/70 mb-1.5">// ${errorMsg}</div>
+          <a
+            href="${repoUrl}/commits"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent hover:text-text underline inline-flex items-center gap-1 font-semibold"
+          >
+            <span>View commit history directly on GitHub</span>
+            <span>↗</span>
+          </a>
+        </div>
+      `;
+    }
+
+    // Open and fetch dynamic data
+    async function openModal(repoData: {
+      name: string;
+      url: string;
+      description: string;
+      tech?: string[];
+      defaultVersion?: string;
+    }) {
+      if (modalRepoName) modalRepoName.textContent = `// ${repoData.name}`;
+      if (modalRepoUrl) modalRepoUrl.href = repoData.url;
+      if (modalRepoUrlText) modalRepoUrlText.textContent = repoData.url;
+      if (modalRepoDesc) modalRepoDesc.textContent = repoData.description;
+      if (modalDirectGithubLink) modalDirectGithubLink.href = repoData.url;
+
+      // Set initial version
+      const fallbackVersion = repoData.defaultVersion || "v0.1.0-dev";
+      if (modalRepoVersion) {
+        modalRepoVersion.textContent = fallbackVersion;
+      }
+
+      // Populate tech badges
+      if (modalRepoTech) {
+        if (repoData.tech && repoData.tech.length > 0) {
+          modalRepoTech.innerHTML = repoData.tech
+            .map(
+              (t) => `
+            <span class="text-xs font-mono text-text/70 bg-text/5 border border-border/50 px-2 py-0.5">
+              ${t}
+            </span>
+          `
+            )
+            .join("");
+        } else {
+          modalRepoTech.innerHTML = "";
+        }
+      }
+
+      dialog?.showModal();
+
+      const parsed = parseGitHubUrl(repoData.url);
+      if (!parsed) {
+        renderError(repoData.url, "Unable to parse repository URL.");
+        return;
+      }
+
+      const cacheKey = `gh_cache_${parsed.owner}_${parsed.repo}`;
+
+      // Check 30-minute cache
+      try {
+        const cachedRaw = localStorage.getItem(cacheKey);
+        if (cachedRaw) {
+          const cached: CacheEntry = JSON.parse(cachedRaw);
+          const age = Date.now() - cached.timestamp;
+          if (age < CACHE_TTL_MS) {
+            // Valid 30-min cache!
+            if (modalRepoVersion && cached.version) {
+              modalRepoVersion.textContent = cached.version;
+            }
+            renderCommits(cached.commits, true);
+            return;
+          }
+        }
+      } catch {
+        // ignore localStorage error
+      }
+
+      // Fetch dynamic data from GitHub API
+      renderLoading();
+
+      try {
+        // Fetch commits and latest release in parallel
+        const [commitsRes, releaseRes] = await Promise.allSettled([
+          fetch(`https://api.github.com/repos/${parsed.owner}/${parsed.repo}/commits?per_page=3`, {
+            headers: { Accept: "application/vnd.github.v3+json" },
+          }),
+          fetch(`https://api.github.com/repos/${parsed.owner}/${parsed.repo}/releases/latest`, {
+            headers: { Accept: "application/vnd.github.v3+json" },
+          }),
+        ]);
+
+        let resolvedVersion = fallbackVersion;
+
+        // Process release or tag
+        if (releaseRes.status === "fulfilled" && releaseRes.value.ok) {
+          const releaseData = await releaseRes.value.json();
+          if (releaseData.tag_name) {
+            resolvedVersion = releaseData.tag_name;
+          }
+        } else {
+          // Attempt tag lookup if release not present
+          try {
+            const tagRes = await fetch(
+              `https://api.github.com/repos/${parsed.owner}/${parsed.repo}/tags?per_page=1`
+            );
+            if (tagRes.ok) {
+              const tags = await tagRes.json();
+              if (Array.isArray(tags) && tags.length > 0 && tags[0].name) {
+                resolvedVersion = tags[0].name;
+              }
+            }
+          } catch {
+            // fallback stays
+          }
+        }
+
+        if (modalRepoVersion) {
+          modalRepoVersion.textContent = resolvedVersion;
+        }
+
+        // Process commits
+        if (commitsRes.status === "fulfilled" && commitsRes.value.ok) {
+          const rawCommits = await commitsRes.value.json();
+          if (Array.isArray(rawCommits)) {
+            const formattedCommits: CommitItem[] = rawCommits.map((item: any) => {
+              const shortSha = item.sha ? item.sha.slice(0, 7) : "";
+              const fullMsg = item.commit?.message || "No commit message";
+              const firstLineMsg = fullMsg.split("\n")[0];
+              const dateStr = item.commit?.author?.date
+                ? new Date(item.commit.author.date).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })
+                : "";
+              return {
+                sha: shortSha,
+                message: firstLineMsg,
+                date: dateStr,
+                url: item.html_url || `${repoData.url}/commit/${item.sha}`,
+              };
+            });
+
+            renderCommits(formattedCommits, false);
+
+            // Save to 30-minute cache
+            try {
+              const cacheEntry: CacheEntry = {
+                timestamp: Date.now(),
+                version: resolvedVersion,
+                commits: formattedCommits,
+              };
+              localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
+            } catch {
+              // ignore storage write failure
+            }
+            return;
+          }
+        }
+
+        // If rate-limited or error returned by GitHub API
+        const status = commitsRes.status === "fulfilled" ? commitsRes.value.status : 0;
+        const msg =
+          status === 403
+            ? "GitHub API rate limit reached (60 req/hr)."
+            : "Could not retrieve commits from GitHub API.";
+        renderError(repoData.url, msg);
+      } catch (err) {
+        renderError(repoData.url, "Network error fetching commits.");
+      }
+    }
+
+    // Global listener for opening repo modal
+    (window as any).openRepoModal = openModal;
+  }
+
+  // Initialize on page load and Astro view transitions
+  initRepoModal();
+  document.addEventListener("astro:page-load", initRepoModal);
+</script>

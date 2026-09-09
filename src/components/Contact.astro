@@ -4,36 +4,39 @@
 
 <section
   id="contact"
-  class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 md:py-24 border-t border-border mb-16 md:mb-24"
+  class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 md:py-24 border-t border-border mb-8 md:mb-16"
 >
   <div
-    class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8"
+    class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10"
   >
     <div>
-      <h2 class="text-3xl font-mono font-bold mb-6">Let's Connect</h2>
-      <p class="text-text/80 max-w-md mb-8">
-        Currently open for new opportunities. Whether you have a question or
-        just want to say hi, I'll try my best to get back to you!
+      <span class="text-xs font-mono text-accent/80 tracking-widest block mb-2 font-semibold">
+        04 // LET'S CONNECT
+      </span>
+      <h2 class="text-3xl font-mono font-bold tracking-tight mb-4">Let's Connect</h2>
+      <p class="text-text/75 max-w-md mb-8 text-sm leading-relaxed">
+        Currently open for new engineering challenges and systems collaboration. Whether you have an inquiry, project idea, or just want to connect, feel free to reach out.
       </p>
       <a
         href="mailto:debarkamondal@gmail.com"
-        class="inline-block border border-text px-8 py-3 font-mono text-sm hover:bg-text hover:text-bg transition-all duration-300"
+        class="inline-flex items-center gap-2.5 border border-text px-8 py-3.5 font-mono text-xs uppercase tracking-wider hover:bg-text hover:text-bg transition-all duration-300 shadow-xs group"
       >
-        Say Hello
+        <span>Say Hello</span>
+        <span class="group-hover:translate-x-1 transition-transform">→</span>
       </a>
     </div>
 
-    <div class="flex flex-wrap items-center gap-4">
+    <div class="flex flex-wrap items-center gap-3">
       <a
         href="https://github.com/debarkamondal"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-accent transition-colors p-2"
-        aria-label="GitHub (@debarkamondal)"
+        class="border border-border/80 p-2.5 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 text-text/80 hover:text-text shadow-xs"
+        aria-label="GitHub Profile (@debarkamondal)"
         title="GitHub (@debarkamondal)"
       >
         <svg
-          class="w-6 h-6"
+          class="w-5 h-5"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +53,7 @@
         href="https://github.com/deez-in"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-accent transition-colors p-2 flex items-center gap-1.5 font-mono text-xs border border-border px-3 py-1.5 hover:border-accent"
+        class="border border-border/80 px-3 py-2.5 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 text-text/80 hover:text-text shadow-xs flex items-center gap-1.5 font-mono text-xs"
         aria-label="Deez Organization"
         title="Deez Organization (@deez-in)"
       >
@@ -73,7 +76,7 @@
         href="https://x.com/debarkamondal"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-accent transition-colors p-2"
+        class="border border-border/80 p-2.5 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 text-text/80 hover:text-text shadow-xs"
         aria-label="X (Twitter)"
         title="X (@debarkamondal)"
       >
@@ -93,12 +96,12 @@
         href="https://linkedin.com/in/debarkamondal"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-accent transition-colors p-2"
+        class="border border-border/80 p-2.5 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 text-text/80 hover:text-text shadow-xs"
         aria-label="LinkedIn"
         title="LinkedIn"
       >
         <svg
-          class="w-6 h-6"
+          class="w-5 h-5"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -109,5 +112,16 @@
         </svg>
       </a>
     </div>
+  </div>
+
+  <div
+    class="mt-16 pt-8 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-text/50"
+  >
+    <p>© {new Date().getFullYear()} Debarka Mondal</p>
+    <p class="flex items-center gap-2">
+      <span>Full Stack & Systems Engineer</span>
+      <span>•</span>
+      <a href="#" class="hover:text-text transition-colors">Back to top ↑</a>
+    </p>
   </div>
 </section>

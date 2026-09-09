@@ -13,26 +13,37 @@
 @layer base {
   :root {
     --bg-color: #fafafa;
-    --text-color: #080808;
-    --accent-color: #888888;
-    --card-bg: #f2f2f2;
+    --text-color: #0a0a0a;
+    --accent-color: #737373;
+    --card-bg: #f4f4f4;
     --border-color: #e5e5e5;
+    --dot-color: rgba(0, 0, 0, 0.05);
   }
 
   html.dark {
-    --bg-color: #080808;
-    --text-color: #e0e0e0;
-    --card-bg: #121212;
-    --border-color: #1f1f1f;
+    --bg-color: #09090b;
+    --text-color: #f4f4f5;
+    --accent-color: #a1a1aa;
+    --card-bg: #111113;
+    --border-color: #202023;
+    --dot-color: rgba(255, 255, 255, 0.04);
   }
 
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: 28px 28px;
     @apply transition-colors duration-300;
+  }
+
+  ::selection {
+    background-color: var(--text-color);
+    color: var(--bg-color);
   }
 }
 
 html {
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }

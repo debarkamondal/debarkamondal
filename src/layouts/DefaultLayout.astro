@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import RepoModal from "../components/RepoModal.astro";
 
 const { title = "Debarka Mondal" } = Astro.props;
 ---
@@ -37,5 +38,6 @@ const { title = "Debarka Mondal" } = Astro.props;
     <main class="max-w-[1440px] mx-auto w-full">
       <slot />
     </main>
+    <RepoModal />
   </body>
 </html>
