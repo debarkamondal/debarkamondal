@@ -1,39 +1,63 @@
 ---
 const coreRepos = [
   {
-    name: "khamoshchat-mobile",
+    name: "deezchatz-mobile",
     description:
-      "End-to-end encrypted messaging app built with React Native and Expo.",
-    tech: ["React Native", "Expo", "TypeScript"],
+      "Cross-platform end-to-end encrypted messaging application built with React Native and Expo.",
+    tech: ["React Native", "Expo", "TypeScript", "E2EE"],
+    url: "https://github.com/deez-in/deezchatz-mobile",
+  },
+  {
+    name: "deezchatz-api",
+    description:
+      "High-throughput backend service handling cryptographic key exchange, sessions, and real-time message routing.",
+    tech: ["Rust", "Axum", "Redis", "Distributed"],
+    url: "https://github.com/deez-in/deezchatz-api",
   },
   {
     name: "libsignal-dezire",
     description:
-      "Signal Protocol implementation optimized for KhamoshChat architecture.",
-    tech: ["Rust", "Crypto"],
+      "Pure-Rust Signal Protocol implementation (X3DH, Double Ratchet) engineered for high performance and cross-platform FFI.",
+    tech: ["Rust", "Signal Protocol", "Cryptography", "FFI"],
+    url: "https://github.com/deez-in/libsignal-dezire",
   },
   {
-    name: "khamoshchat-api",
-    description: "Backend service handling key exchange and message routing.",
-    tech: ["Rust", "Axum", "Redis"],
+    name: "deezchatz-infra",
+    description:
+      "Ansible playbooks and infrastructure automation for provisioning and maintaining the DeezChatz cloud infrastructure.",
+    tech: ["Ansible", "IaC", "Linux", "DevOps"],
+    url: "https://github.com/deez-in/deezchatz-infra",
   },
 ];
 
 const supportingRepos = [
   {
+    name: "expo-audio-opus",
+    description:
+      "Native Expo audio alternative to record & play .ogg files with bidirectional PCM to OPUS encoding and decoding.",
+    tech: ["Rust", "Swift", "Kotlin", "Audio"],
+    url: "https://github.com/deez-in/expo-audio-opus",
+  },
+  {
+    name: "expo-libsignal-dezire",
+    description:
+      "Expo React Native native module wrapper for libsignal-dezire providing cryptographic primitives to iOS and Android.",
+    tech: ["Swift", "React Native", "Expo", "E2EE"],
+    url: "https://github.com/deez-in/expo-libsignal-dezire",
+  },
+  {
     name: "expo-native-mqtt",
-    description: "Native MQTT client bindings for Expo applications.",
-    tech: ["Kotlin", "Swift", "Expo"],
+    description:
+      "High-performance native MQTT client bindings for Expo applications wrapping HiveMQ (Android) and CocoaMQTT (iOS).",
+    tech: ["Kotlin", "Swift", "Expo", "MQTT"],
+    url: "https://github.com/deez-in/expo-native-mqtt",
   },
   {
     name: "expo-google-native-oauth",
-    description: "Native Google OAuth integration for Expo.",
-    tech: ["React Native", "OAuth"],
-  },
-  {
-    name: "khamoshchat-infra",
-    description: "Infrastructure as Code for deploying KhamoshChat services.",
-    tech: ["Terraform", "AWS"],
+    description:
+      "Native Google OAuth module for Expo React Native utilizing GIDSignIn on iOS and Credential Manager on Android.",
+    tech: ["TypeScript", "OAuth", "Android", "iOS"],
+    url: "https://github.com/deez-in/expo-google-native-oauth",
   },
 ];
 ---
@@ -42,47 +66,128 @@ const supportingRepos = [
   id="ecosystem"
   class="max-w-[1440px] mx-auto px-4 md:px-8 py-16 md:py-24 border-t border-border"
 >
-  <h2 class="text-3xl font-mono font-bold mb-12">KhamoshChat Ecosystem</h2>
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <div>
+      <h2 class="text-3xl font-mono font-bold tracking-tight">Deez Ecosystem</h2>
+      <p class="text-text/70 mt-2 text-sm max-w-xl">
+        A privacy-first, end-to-end encrypted messaging ecosystem built across systems-level Rust backends, cryptographic protocol implementations, and high-performance native Expo mobile modules.
+      </p>
+    </div>
+    <a
+      href="https://github.com/deez-in"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 text-xs font-mono border border-border px-3 py-1.5 hover:border-accent hover:text-accent transition-colors self-start md:self-auto group"
+    >
+      <span>github.com/deez-in</span>
+      <svg
+        class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        ></path>
+      </svg>
+    </a>
+  </div>
 
   <div class="mb-16">
-    <h3 class="text-xl font-mono text-accent mb-6">Core Components</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex items-center gap-3 mb-6">
+      <h3 class="text-xl font-mono text-accent">Core Infrastructure & Services</h3>
+      <span class="text-xs font-mono px-2 py-0.5 border border-border text-text/60">Core</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         coreRepos.map((repo) => (
-          <div class="border border-border p-6 bg-card hover:border-accent transition-colors group">
-            <h4 class="font-mono font-bold text-lg mb-2 group-hover:text-accent transition-colors">
-              {repo.name}
-            </h4>
-            <p class="text-sm text-text/70 mb-4 h-16">{repo.description}</p>
-            <div class="flex flex-wrap gap-2">
+          <a
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-border p-6 bg-card hover:border-accent transition-all duration-300 group flex flex-col justify-between block"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-mono font-bold text-lg group-hover:text-accent transition-colors truncate">
+                  {repo.name}
+                </h4>
+                <svg
+                  class="w-4 h-4 text-text/40 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-sm text-text/70 mb-4 min-h-[4rem]">{repo.description}</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-border/50">
               {repo.tech.map((t) => (
-                <span class="text-xs font-mono px-2 py-1 bg-text/5">{t}</span>
+                <span class="text-xs font-mono px-2 py-0.5 bg-text/5 text-text/80">{t}</span>
               ))}
             </div>
-          </div>
+          </a>
         ))
       }
     </div>
   </div>
 
   <div>
-    <h3 class="text-xl font-mono text-accent mb-6">
-      Supporting Libraries & Infra
-    </h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex items-center gap-3 mb-6">
+      <h3 class="text-xl font-mono text-accent">
+        Supporting Native Libraries & Modules
+      </h3>
+      <span class="text-xs font-mono px-2 py-0.5 border border-border text-text/60">Bridges</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         supportingRepos.map((repo) => (
-          <div class="border border-border p-6 bg-card hover:border-accent transition-colors group">
-            <h4 class="font-mono font-bold text-lg mb-2 group-hover:text-accent transition-colors">
-              {repo.name}
-            </h4>
-            <p class="text-sm text-text/70 mb-4 h-16">{repo.description}</p>
-            <div class="flex flex-wrap gap-2">
+          <a
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-border p-6 bg-card hover:border-accent transition-all duration-300 group flex flex-col justify-between block"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-mono font-bold text-lg group-hover:text-accent transition-colors truncate">
+                  {repo.name}
+                </h4>
+                <svg
+                  class="w-4 h-4 text-text/40 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+              </div>
+              <p class="text-sm text-text/70 mb-4 min-h-[4rem]">{repo.description}</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-border/50">
               {repo.tech.map((t) => (
-                <span class="text-xs font-mono px-2 py-1 bg-text/5">{t}</span>
+                <span class="text-xs font-mono px-2 py-0.5 bg-text/5 text-text/80">{t}</span>
               ))}
             </div>
-          </div>
+          </a>
         ))
       }
     </div>
