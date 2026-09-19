@@ -4,13 +4,15 @@
 
 <div
   id="graph-container"
-  class="absolute inset-0 z-0 overflow-hidden opacity-80 transition-all duration-700 ease-in-out"
+  class="absolute inset-0 z-0 overflow-hidden opacity-80 transition-all duration-700 ease-in-out select-none"
 >
-  <svg id="knowledge-graph" class="w-full h-full"></svg>
+  <svg id="knowledge-graph" class="w-full h-full" style="pointer-events: all; touch-action: none;"></svg>
 
   <button
     id="close-graph-btn"
-    class="absolute top-24 right-8 p-2.5 bg-card/80 backdrop-blur-md border border-border opacity-0 pointer-events-none transition-all duration-300 hover:border-text text-text cursor-pointer"
+    type="button"
+    aria-label="Close knowledge graph"
+    class="absolute top-24 right-8 p-2.5 bg-card/80 backdrop-blur-md border border-border opacity-0 pointer-events-none transition-all duration-300 hover:border-text text-text cursor-pointer z-50"
   >
     <svg
       class="w-6 h-6"
@@ -26,6 +28,13 @@
         d="M6 18L18 6M6 6l12 12"></path>
     </svg>
   </button>
+
+  <div
+    id="graph-hint"
+    class="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-[11px] text-text/60 border border-border bg-card/90 px-3 py-1.5 pointer-events-none uppercase tracking-wider opacity-0 transition-opacity duration-300 select-none z-50"
+  >
+    Scroll to Zoom · Drag to Move Graph · ESC to Close
+  </div>
 </div>
 
 <script>
@@ -61,26 +70,64 @@
 
     if (!container) return;
 
+    svg.selectAll("*").remove();
+
     const width = container.clientWidth;
     const height = container.clientHeight;
+
+    // Full-bleed backdrop rect to capture drag/pan and zoom events anywhere across the container
+    svg
+      .append("rect")
+      .attr("class", "graph-backdrop")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("fill", "transparent")
+      .style("pointer-events", "all");
 
     const g = svg.append("g");
     const rotateG = g.append("g");
 
-    // Zoom support (enabled only in interactive mode)
+    // Zoom and Pan support (enabled only in interactive mode)
     const zoom = d3
       .zoom<SVGSVGElement, unknown>()
-      .scaleExtent([0.5, 3])
+      .scaleExtent([0.3, 5])
       .filter((event) => {
         if (!isInteractive) return false;
-        return (!event.ctrlKey || event.type === "wheel") && !event.button;
+        // Bind scroll (wheel) to zoom
+        if (event.type === "wheel") return true;
+        // Bind left-click drag to pan / move the graph
+        if (event.type === "mousedown") return event.button === 0;
+        // Support touch interactions
+        if (event.type.startsWith("touch")) return true;
+        return false;
+      })
+      .on("start", (event) => {
+        if (isInteractive && event.sourceEvent?.type === "mousedown") {
+          svg.style("cursor", "grabbing");
+        }
       })
       .on("zoom", (event) => {
         g.attr("transform", event.transform);
+      })
+      .on("end", () => {
+        if (isInteractive) {
+          svg.style("cursor", "grab");
+        }
       });
 
     svg.call(zoom);
     svg.attr("viewBox", `0 0 ${width} ${height}`);
+
+    // Prevent mouse wheel from scrolling the page when interacting with the graph container
+    container.addEventListener(
+      "wheel",
+      (e) => {
+        if (isInteractive) {
+          e.preventDefault();
+        }
+      },
+      { passive: false },
+    );
 
     try {
       const response = await fetch("/graph.json");
@@ -149,6 +196,7 @@
         .selectAll("line")
         .data(links)
         .join("line")
+        .attr("pointer-events", "none")
         .attr("stroke-width", (d) => {
           return edgeWidthScale((d as any).weight || 1);
         });
@@ -158,7 +206,8 @@
         .selectAll("g.node")
         .data(nodes)
         .join("g")
-        .attr("class", "node");
+        .attr("class", "node cursor-pointer")
+        .style("cursor", "pointer");
 
       node
         .append("circle")
@@ -195,6 +244,7 @@
             simulation.alphaTarget(0.3).restart();
           event.subject.fx = event.subject.x;
           event.subject.fy = event.subject.y;
+          svg.style("cursor", "grabbing");
         })
         .on("drag", (event) => {
           event.subject.fx = event.x;
@@ -204,6 +254,7 @@
           if (!event.active && simulation) simulation.alphaTarget(0.01);
           event.subject.fx = null;
           event.subject.fy = null;
+          svg.style("cursor", isInteractive ? "grab" : "default");
         });
 
       node.call(drag as any);
@@ -312,12 +363,29 @@
       window.toggleGraphInteractivity = () => {
         isInteractive = !isInteractive;
         const closeBtn = document.getElementById("close-graph-btn");
+        const hint = document.getElementById("graph-hint");
 
         if (isInteractive) {
-          const newWidth = container.clientWidth;
-          const newHeight = container.clientHeight;
+          // Disable page scrolling when exploring knowledge graph
+          document.body.style.overflow = "hidden";
+          document.documentElement.style.overflow = "hidden";
+
+          container.classList.remove("z-0", "opacity-80", "absolute");
+          container.classList.add(
+            "fixed",
+            "opacity-100",
+            "z-40",
+            "bg-bg/95",
+            "backdrop-blur-sm",
+          );
+
+          svg.style("cursor", "grab");
+
+          const newWidth = container.clientWidth || window.innerWidth;
+          const newHeight = container.clientHeight || window.innerHeight;
           currentCx = newWidth / 2;
           currentCy = newHeight / 2;
+          svg.attr("viewBox", `0 0 ${newWidth} ${newHeight}`);
 
           if (simulation) {
             rotateG
@@ -330,13 +398,6 @@
               );
           }
 
-          container.classList.remove("z-0", "opacity-80");
-          container.classList.add(
-            "opacity-100",
-            "z-40",
-            "bg-bg/95",
-            "backdrop-blur-sm",
-          );
           svg
             .selectAll(".node-label")
             .transition()
@@ -348,11 +409,32 @@
             closeBtn.classList.remove("opacity-0", "pointer-events-none");
             closeBtn.classList.add("opacity-100", "pointer-events-auto");
           }
+
+          if (hint) {
+            hint.classList.remove("opacity-0");
+            hint.classList.add("opacity-100");
+          }
         } else {
+          // Restore page scrolling
+          document.body.style.overflow = "";
+          document.documentElement.style.overflow = "";
+
+          container.classList.add("z-0", "opacity-80", "absolute");
+          container.classList.remove(
+            "fixed",
+            "opacity-100",
+            "z-40",
+            "bg-bg/95",
+            "backdrop-blur-sm",
+          );
+
+          svg.style("cursor", "default");
+
           const newWidth = container.clientWidth;
           const newHeight = container.clientHeight;
           currentCx = newWidth > 768 ? newWidth * 0.7 : newWidth / 2;
           currentCy = newHeight / 2;
+          svg.attr("viewBox", `0 0 ${newWidth} ${newHeight}`);
 
           if (simulation) {
             rotateG
@@ -365,13 +447,6 @@
               );
           }
 
-          container.classList.add("z-0", "opacity-80");
-          container.classList.remove(
-            "opacity-100",
-            "z-40",
-            "bg-bg/95",
-            "backdrop-blur-sm",
-          );
           svg
             .selectAll(".node-label")
             .transition()
@@ -384,7 +459,12 @@
             closeBtn.classList.remove("opacity-100", "pointer-events-auto");
           }
 
-          // Reset zoom
+          if (hint) {
+            hint.classList.add("opacity-0");
+            hint.classList.remove("opacity-100");
+          }
+
+          // Reset zoom & pan
           svg
             .transition()
             .duration(750)
@@ -398,7 +478,7 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function setupGraphEvents() {
     initGraph();
 
     const closeBtn = document.getElementById("close-graph-btn");
@@ -407,11 +487,28 @@
         window.toggleGraphInteractivity();
       }
     });
-  });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && isInteractive && window.toggleGraphInteractivity) {
+        window.toggleGraphInteractivity();
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupGraphEvents);
+  } else {
+    setupGraphEvents();
+  }
+  document.addEventListener("astro:page-load", setupGraphEvents);
 </script>
 
 <style>
   #knowledge-graph .node-base {
     fill: var(--bg-color);
+  }
+  #knowledge-graph .node,
+  #knowledge-graph .node circle {
+    cursor: pointer;
   }
 </style>

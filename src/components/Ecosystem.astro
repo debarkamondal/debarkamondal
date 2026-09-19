@@ -7,6 +7,7 @@ const coreRepos = [
     tech: ["React Native", "Expo", "TypeScript", "E2EE"],
     url: "https://github.com/deez-in/deezchatz-mobile",
     version: "v0.1.0",
+    colSpan: "lg:col-span-2",
   },
   {
     name: "deezchatz-api",
@@ -15,6 +16,7 @@ const coreRepos = [
     tech: ["Rust", "Axum", "Redis", "Distributed"],
     url: "https://github.com/deez-in/deezchatz-api",
     version: "v0.1.0",
+    colSpan: "lg:col-span-2",
   },
   {
     name: "libsignal-dezire",
@@ -23,6 +25,25 @@ const coreRepos = [
     tech: ["Rust", "Signal Protocol", "Cryptography", "FFI"],
     url: "https://github.com/deez-in/libsignal-dezire",
     version: "v0.1.0",
+    colSpan: "lg:col-span-1",
+  },
+  {
+    name: "deezchatz-sdk-rust",
+    description:
+      "Asynchronous client SDK encapsulating Signal Protocol ratchets, stateless VXEdDSA REST authentication, event-driven MQTT networking, and pluggable storage traits.",
+    tech: ["Rust", "Tokio", "Signal Protocol", "MQTT"],
+    url: "https://github.com/deez-in/deezchatz-sdk-rust",
+    version: "v0.1.0",
+    colSpan: "lg:col-span-1",
+  },
+  {
+    name: "deezchatz-cli",
+    description:
+      "Terminal-native client featuring an Elm-architecture Ratatui TUI, headless scriptable subcommands, multi-database SQLCipher storage, and OS keyring integration.",
+    tech: ["Rust", "Ratatui", "SQLCipher", "E2EE"],
+    url: "https://github.com/deez-in/deezchatz-cli",
+    version: "v0.1.0",
+    colSpan: "lg:col-span-1",
   },
   {
     name: "deezchatz-infra",
@@ -31,18 +52,11 @@ const coreRepos = [
     tech: ["Ansible", "IaC", "Linux", "DevOps"],
     url: "https://github.com/deez-in/deezchatz-infra",
     version: "v0.1.0",
+    colSpan: "lg:col-span-1",
   },
 ];
 
 const supportingRepos = [
-  {
-    name: "expo-audio-opus",
-    description:
-      "Native Expo audio alternative to record & play .ogg files with bidirectional PCM to OPUS encoding and decoding.",
-    tech: ["Rust", "Swift", "Kotlin", "Audio"],
-    url: "https://github.com/deez-in/expo-audio-opus",
-    version: "v0.1.0",
-  },
   {
     name: "expo-libsignal-dezire",
     description:
@@ -50,6 +64,16 @@ const supportingRepos = [
     tech: ["Swift", "React Native", "Expo", "E2EE"],
     url: "https://github.com/deez-in/expo-libsignal-dezire",
     version: "v0.1.0",
+    colSpan: "lg:col-span-2",
+  },
+  {
+    name: "expo-audio-opus",
+    description:
+      "Native Expo audio alternative to record & play .ogg files with bidirectional PCM to OPUS encoding and decoding.",
+    tech: ["Rust", "Swift", "Kotlin", "Audio"],
+    url: "https://github.com/deez-in/expo-audio-opus",
+    version: "v0.1.0",
+    colSpan: "lg:col-span-2",
   },
   {
     name: "expo-native-mqtt",
@@ -58,6 +82,7 @@ const supportingRepos = [
     tech: ["Kotlin", "Swift", "Expo", "MQTT"],
     url: "https://github.com/deez-in/expo-native-mqtt",
     version: "v0.1.0",
+    colSpan: "lg:col-span-2 md:col-span-2",
   },
   {
     name: "expo-google-native-oauth",
@@ -66,6 +91,16 @@ const supportingRepos = [
     tech: ["TypeScript", "OAuth", "Android", "iOS"],
     url: "https://github.com/deez-in/expo-google-native-oauth",
     version: "v0.1.0",
+    colSpan: "lg:col-span-1",
+  },
+  {
+    name: "deez-site",
+    description:
+      "The official web portal and showcase landing page for the deez.in organization and DeezChatz ecosystem.",
+    tech: ["Astro", "Tailwind CSS", "TypeScript", "Web"],
+    url: "https://github.com/deez-in/deez-site",
+    version: "v0.1.0",
+    colSpan: "lg:col-span-1",
   },
 ];
 ---
@@ -119,7 +154,7 @@ const supportingRepos = [
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer"
+            class={`repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer ${repo.colSpan || ""}`}
             data-repo-name={repo.name}
             data-repo-url={repo.url}
             data-repo-desc={repo.description}
@@ -132,21 +167,16 @@ const supportingRepos = [
                   {repo.name}
                 </h4>
                 <svg
-                  class="w-4 h-4 text-text/30 group-hover:text-text group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-4 h-4 text-text/40 group-hover:text-text rotate-45 group-hover:scale-110 transition-all flex-shrink-0 ml-2 -mt-3"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  ></path>
+                  <path d="M480-80 240-320l57-57 183 183 183-183 57 57L480-80ZM298-584l-58-56 240-240 240 240-58 56-182-182-182 182Z"></path>
                 </svg>
               </div>
-              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4rem] leading-relaxed">
+              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4.25rem] leading-relaxed line-clamp-3">
                 {repo.description}
               </p>
             </div>
@@ -176,7 +206,7 @@ const supportingRepos = [
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer"
+            class={`repo-modal-trigger border border-border/80 p-6 bg-card hover:bg-white dark:hover:bg-[#18181b] hover:border-text/70 dark:hover:border-white/40 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group flex flex-col justify-between block cursor-pointer ${repo.colSpan || ""}`}
             data-repo-name={repo.name}
             data-repo-url={repo.url}
             data-repo-desc={repo.description}
@@ -189,21 +219,16 @@ const supportingRepos = [
                   {repo.name}
                 </h4>
                 <svg
-                  class="w-4 h-4 text-text/30 group-hover:text-text group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-4 h-4 text-text/40 group-hover:text-text rotate-45 group-hover:scale-110 transition-all flex-shrink-0 ml-2"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  ></path>
+                  <path d="M480-80 240-320l57-57 183 183 183-183 57 57L480-80ZM298-584l-58-56 240-240 240 240-58 56-182-182-182 182Z"></path>
                 </svg>
               </div>
-              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4rem] leading-relaxed">
+              <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4.25rem] leading-relaxed line-clamp-3">
                 {repo.description}
               </p>
             </div>

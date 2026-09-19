@@ -24,6 +24,14 @@ const hobbyProjects = [
     repoUrl: "https://github.com/debarkamondal/twitter-clone-frontend",
     version: "v0.1.0",
   },
+  {
+    name: "nogravity",
+    description:
+      "A custom terminal tool designed to fetch and view your chats from Google's Antigravity.",
+    tech: ["TypeScript", "CLI"],
+    repoUrl: "https://github.com/debarkamondal/nogravity",
+    version: "v0.1.0",
+  },
 ];
 ---
 
@@ -45,7 +53,7 @@ const hobbyProjects = [
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
     {
       hobbyProjects.map((project) => (
         <a
@@ -65,21 +73,16 @@ const hobbyProjects = [
                 {project.name}
               </h4>
               <svg
-                class="w-4 h-4 text-text/30 group-hover:text-text group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+                class="w-4 h-4 text-text/40 group-hover:text-text rotate-45 group-hover:scale-110 transition-all flex-shrink-0 ml-2"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                ></path>
+                <path d="M480-80 240-320l57-57 183 183 183-183 57 57L480-80ZM298-584l-58-56 240-240 240 240-58 56-182-182-182 182Z"></path>
               </svg>
             </div>
-            <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[3.5rem] leading-relaxed">
+            <p class="text-sm text-text/70 group-hover:text-text/90 transition-colors mb-4 min-h-[4.25rem] leading-relaxed line-clamp-3">
               {project.description}
             </p>
           </div>
